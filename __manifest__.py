@@ -20,8 +20,7 @@
         * hr_recruitment (Reclutamiento)
         * stock (Inventario)
     """,
-    'author': 'Your Company',
-    'website': 'https://www.yourcompany.com',
+    'author': 'Ricardo Marín',
     'depends': [
         'base',
         'hr',
