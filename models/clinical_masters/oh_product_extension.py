@@ -30,4 +30,9 @@ class ProductTemplate(models.Model):
         string='Presentación',
         help='Especifica el formato físico del SKU (Ej: Ampolla)'
     )
+    oh_brand_id = fields.Many2one(
+        'oh.medicine.brand',
+        string='Marca',
+        help='Marca comercial del producto farmacéutico'
+    )
 

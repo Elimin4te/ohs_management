@@ -19,11 +19,6 @@ class OhMedicineMaster(models.Model):
         string='Categoría Terapéutica',
         help='Clasificación terapéutica del medicamento'
     )
-    brand_id = fields.Many2one(
-        'oh.medicine.brand',
-        string='Marca',
-        help='Marca comercial del medicamento'
-    )
     product_ids = fields.One2many(
         'product.template',
         'oh_master_medicine_id',

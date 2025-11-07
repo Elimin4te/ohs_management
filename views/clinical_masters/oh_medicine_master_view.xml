@@ -8,7 +8,6 @@
             <tree string="Maestro de Medicinas">
                 <field name="name" required="1"/>
                 <field name="therapeutic_category_id"/>
-                <field name="brand_id"/>
                 <field name="is_active"/>
             </tree>
         </field>
@@ -27,9 +26,6 @@
                             <field name="therapeutic_category_id" 
                                    domain="[('is_active', '=', True)]"
                                    options="{'no_create_edit': False}"/>
-                            <field name="brand_id" 
-                                   domain="[('is_active', '=', True)]"
-                                   options="{'no_create_edit': False}"/>
                         </group>
                         <group>
                             <field name="is_active"/>
@@ -41,6 +37,7 @@
                                 <tree>
                                     <field name="name"/>
                                     <field name="default_code"/>
+                                    <field name="oh_brand_id"/>
                                     <field name="oh_presentation_id"/>
                                     <field name="list_price"/>
                                 </tree>
@@ -61,7 +58,6 @@
             <search string="Maestro de Medicinas">
                 <field name="name" string="Sustancia Activa"/>
                 <field name="therapeutic_category_id" string="Categoría Terapéutica"/>
-                <field name="brand_id" string="Marca"/>
                 <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
                 <separator/>
                 <filter string="Analgésicos/Antipiréticos" name="analgesico" domain="[('therapeutic_category_id.name', 'ilike', 'Analgésico')]"/>

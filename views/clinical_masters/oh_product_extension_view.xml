@@ -23,6 +23,9 @@
                             <field name="oh_presentation_id" 
                                    domain="[('is_active', '=', True)]"
                                    options="{'no_create_edit': False}"/>
+                            <field name="oh_brand_id" 
+                                   domain="[('is_active', '=', True)]"
+                                   options="{'no_create_edit': False}"/>
                         </group>
                         <group string="Vías de Administración" invisible="not oh_is_medicine">
                             <field name="oh_via_ids" widget="many2many_tags" 
@@ -31,10 +34,27 @@
                         </group>
                     </group>
                     <div invisible="not oh_is_medicine" class="alert alert-info" role="alert">
-                        <p>Configure la sustancia activa, presentación y vías de administración disponibles para esta medicina.</p>
+                        <p>Configure la sustancia activa, presentación, marca y vías de administración disponibles para esta medicina.</p>
                     </div>
                 </page>
             </xpath>
+        </field>
+    </record>
+
+    <!-- Vista Tree para Medicinas -->
+    <record id="view_oh_medicines_tree" model="ir.ui.view">
+        <field name="name">product.template.oh.medicines.tree</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <tree string="Medicinas">
+                <field name="name"/>
+                <field name="default_code"/>
+                <field name="oh_master_medicine_id"/>
+                <field name="oh_brand_id"/>
+                <field name="oh_presentation_id"/>
+                <field name="list_price"/>
+                <field name="qty_available" invisible="1"/>
+            </tree>
         </field>
     </record>
 
@@ -43,6 +63,9 @@
         <field name="name">Medicinas</field>
         <field name="res_model">product.template</field>
         <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('view_oh_medicines_tree')}),
+            (0, 0, {'view_mode': 'form'})]"/>
         <field name="domain">[('oh_is_medicine', '=', True)]</field>
         <field name="context">{'default_oh_is_medicine': True, 'search_default_oh_is_medicine': 1}</field>
         <field name="help" type="html">
@@ -51,8 +74,8 @@
             </p>
             <p>
                 Las medicinas son productos farmacéuticos que pueden administrarse
-                a los empleados. Configure las vías de administración disponibles
-                para cada medicina en la pestaña "Medicina" del formulario.
+                a los empleados. Configure la sustancia activa, presentación, marca
+                y vías de administración en la pestaña "Medicina" del formulario.
             </p>
         </field>
     </record>
