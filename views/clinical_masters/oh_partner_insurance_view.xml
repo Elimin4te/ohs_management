@@ -18,18 +18,7 @@
     </record>
 
     <!-- Vista de Formulario para Aseguradoras -->
-    <record id="view_oh_partner_insurance_form" model="ir.ui.view">
-        <field name="name">res.partner.form.insurance</field>
-        <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_form"/>
-        <field name="arch" type="xml">
-            <!-- Mejorar visibilidad del campo category_id con widget de tags -->
-            <field name="category_id" position="attributes">
-                <attribute name="widget">many2many_tags</attribute>
-                <attribute name="options">{'color_field': 'color'}</attribute>
-            </field>
-        </field>
-    </record>
+    <!-- Usamos la vista base de partner ya que hereda correctamente -->
 
     <!-- Vista de Búsqueda para Aseguradoras -->
     <record id="view_oh_partner_insurance_search" model="ir.ui.view">
@@ -54,11 +43,11 @@
         <field name="name">Aseguradoras</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_ids" eval="[(5, 0, 0),
-                                       (0, 0, {'view_mode': 'tree', 'view_id': ref('view_oh_partner_insurance_tree')}),
-                                       (0, 0, {'view_mode': 'form', 'view_id': ref('view_oh_partner_insurance_form')})]"/>
+        <field name="view_id" ref="view_oh_partner_insurance_tree"/>
+        <field name="target">current</field>
         <field name="domain" eval="[('category_id', 'in', [ref('partner_category_insurance')])]"/>
         <field name="context" eval="{'default_is_company': True, 'default_category_id': [(4, ref('partner_category_insurance'))]}"/>
+        <field name="search_view_id" ref="view_oh_partner_insurance_search"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Crear una nueva aseguradora
