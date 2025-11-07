@@ -23,6 +23,7 @@
         * uom (Unidades de Medida)
     """,
     'author': 'Ricardo Marín',
+    'icon': '/ohs_management/static/description/icon.png',
     'depends': [
         'base',
         'hr',
