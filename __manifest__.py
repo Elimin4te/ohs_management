@@ -1,8 +1,8 @@
 {
-    'name': 'OHS Management',
+    'name': 'Gestión de Salud Ocupacional',
     'version': '17.0.1.0.0',
     'category': 'Human Resources',
-    'summary': 'Occupational Health and Safety (SST) Management System',
+    'summary': 'Sistema de Gestión de Salud y Seguridad en el Trabajo (SST)',
     'description': """
         Sistema de Gestión de Salud y Seguridad en el Trabajo (SST)
         ===========================================================
