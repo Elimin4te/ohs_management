@@ -5,8 +5,8 @@
         <field name="name">Centros IVSS</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">[('category_id', 'in', [ref('partner_category_ivss')])]</field>
-        <field name="context">{'default_category_id': [(4, ref('partner_category_ivss'))], 'search_default_ivss': 1}</field>
+        <field name="domain" eval="[('category_id', 'in', [ref('partner_category_ivss')])]"/>
+        <field name="context" eval="{'default_category_id': [(4, ref('partner_category_ivss'))]}"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Crear un nuevo centro IVSS

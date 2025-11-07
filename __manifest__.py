@@ -43,6 +43,7 @@
         'data/occupational_masters/oh_rest_origin_data.xml',
         
         # Default data - Clinical Masters
+        'data/clinical_masters/oh_partner_ivss_data.xml',
         'data/clinical_masters/oh_medicine_via_data.xml',
         'data/clinical_masters/oh_medicine_therapeutic_category_data.xml',
         'data/clinical_masters/oh_medicine_brand_data.xml',
@@ -61,6 +62,7 @@
         'views/occupational_masters/oh_origin_view.xml',
         
         # Clinical Masters Views
+        'views/clinical_masters/oh_partner_ivss_view.xml',
         'views/clinical_masters/oh_medicine_via_view.xml',
         'views/clinical_masters/oh_medicine_therapeutic_category_view.xml',
         'views/clinical_masters/oh_medicine_brand_view.xml',

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Categoría de Contacto para Centros IVSS -->
+        <record id="partner_category_ivss" model="res.partner.category">
+            <field name="name">Centro IVSS</field>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- CENTROS IVSS - HOSPITALES -->
+        <!-- ============================================ -->
+        
+        <record id="ivss_hospital_miguel_perez_carreno" model="res.partner">
+            <field name="name">Hospital Dr. Miguel Pérez Carreño</field>
+            <field name="is_company">True</field>
+            <field name="street">Vuelta el Pescozón, urbanización Bella Vista</field>
+            <field name="phone">(0212) 4078001 / 8002/8006</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_hospital_jose_gregorio_hernandez" model="res.partner">
+            <field name="name">Hospital Dr. José Gregorio Hernández</field>
+            <field name="is_company">True</field>
+            <field name="street">Fuente las Brisas a Pirineo, San José, Cotiza</field>
+            <field name="phone">(0212) 862.29.10 / 862.31.62 / 862.55.03/ 862.55.04 / 862.31.61</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_hospital_elias_toro" model="res.partner">
+            <field name="name">Hospital Dr. Elías Toro</field>
+            <field name="is_company">True</field>
+            <field name="street">Calle Colombia con Séptima Av. Catia</field>
+            <field name="phone">(0212) 870.20.91 (Fax) / 870.22.21 al 24</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_maternidad_santa_ana" model="res.partner">
+            <field name="name">Maternidad Santa Ana</field>
+            <field name="is_company">True</field>
+            <field name="street">Avenida Anauco, San Bernardino</field>
+            <field name="phone">(0212) 551.89.24 (Fax) / 551.09.73/551.64.97</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_centro_rehabilitacion_alejandro_rhode" model="res.partner">
+            <field name="name">Centro Nacional de Rehabilitación Dr. Alejandro Rhode</field>
+            <field name="is_company">True</field>
+            <field name="street">Vuelta el Pescozón, urbanización Bella Vista</field>
+            <field name="phone">(0212) 472.21.76 / 472.47.64 (Fax) / 472.15.77 / 472.47.67 (May Hamilton)</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_centro_especialidades_horacio_almeida" model="res.partner">
+            <field name="name">Centro de Especialidades Médicas Dr. Horacio Almeida</field>
+            <field name="is_company">True</field>
+            <field name="street">Mercedes a Luneta, Número 45, Altagracia</field>
+            <field name="phone">(0212) 860.86.16 / 860.86.16 / 860.86.17/864.61.98 / (Fax) 862.17.02</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- CENTROS IVSS - CLÍNICAS POPULARES -->
+        <!-- ============================================ -->
+        
+        <record id="ivss_clinica_catia_pedro_arreaza" model="res.partner">
+            <field name="name">Clínica Popular de Catia Dr. Pedro Felipe Arreaza Calatrava</field>
+            <field name="is_company">True</field>
+            <field name="street">Avenida Sucre, con primera calle los Flores de Catia</field>
+            <field name="phone">(0212) 862.19.44 (Fax) 860.04.65 / 860.87.60 / 862.19.45</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_clinica_paraiso_francisco_salazar" model="res.partner">
+            <field name="name">Clínica Popular del Paraíso Dr. Francisco Salazar Meneses</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Principal de los Samanes, el Paraíso</field>
+            <field name="phone">(0212) 481.87.89   481.16.59   481.20.71</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_clinica_valle_patrocino_penuela" model="res.partner">
+            <field name="name">Clínica Popular del Valle Dr. Patrocinio Peñuela Ruíz</field>
+            <field name="is_company">True</field>
+            <field name="street">Calle Uno y Dos al lado de los Bomberos Av. Intercomunal de los Jardínes del Valle sector Longaray</field>
+            <field name="phone">(0212) 672.34.66  672.55.06   672.68.36</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_clinica_caricuao" model="res.partner">
+            <field name="name">Clínica Popular Caricuao</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Principal de la Hacienda Sector UD-5 Caricuao</field>
+            <field name="phone">(0212)  432.37.93   432.16.79   432.53.18</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- CENTROS IVSS - CENTROS ESPECIALIZADOS -->
+        <!-- ============================================ -->
+        
+        <record id="ivss_centro_inmunologia_clinica" model="res.partner">
+            <field name="name">Centro de Inmunología Clínica</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Manuel Felipe Tovar, San Bernardino Wuinta los Cospes n°17</field>
+            <field name="phone">(0212) 551.06.35  552.43.02</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_servicio_oncologico_hospitalario" model="res.partner">
+            <field name="name">Servicio Oncológico Hospitalario del IVSS</field>
+            <field name="is_company">True</field>
+            <field name="street">Urbanización los Castaños el Cementerio</field>
+            <field name="phone">(0212) 631.26.16  631.14.66</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_unidad_psiquiatria_infantil" model="res.partner">
+            <field name="name">Unidad Nacional de Psiquiatría Infantil</field>
+            <field name="is_company">True</field>
+            <field name="street">Calle El Bosque con Chaguaramos, Quinta Cabreales, la Florida</field>
+            <field name="phone">(0212) 730.35.16  730.17.38</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- CENTROS IVSS - AMBULATORIOS -->
+        <!-- ============================================ -->
+        
+        <record id="ivss_ambulatorio_dilio_sequera" model="res.partner">
+            <field name="name">Ambulatorio Dr. Dilio Sequera Peraza</field>
+            <field name="is_company">True</field>
+            <field name="street">Segunda Transversal de Guaicaipuro Av. Andrés Bello</field>
+            <field name="phone">(0212) 571.81.43  571.72.68   571.88.10</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_angel_ochoa" model="res.partner">
+            <field name="name">Ambulatorio Dr. Angel Vicente Ochoa</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Principal del Cementerio</field>
+            <field name="phone">(0212) 631.54.30   631.86.34</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_julio_iribarren" model="res.partner">
+            <field name="name">Ambulatorio Dr. Julio Iribarren Borges</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. El Cuartel sector el Amparo Catia</field>
+            <field name="phone">(0212) 870.0979   870.46.15  870.46.14</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_armando_castillo" model="res.partner">
+            <field name="name">Ambulatorio Dr. Armando Castillo Plaza</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Intercomunal de Antímano, Esq. de Parate Bueno (detrás de la Estación del Metro)</field>
+            <field name="phone">(0212) 472.28.34  472.94.41  472.94.26</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- CENTROS IVSS - ESTADO TRUJILLO -->
+        <!-- ============================================ -->
+        
+        <record id="ivss_hospital_juan_motezuma_ginnari" model="res.partner">
+            <field name="name">Hospital Dr. Juan Motezuma Ginnari</field>
+            <field name="is_company">True</field>
+            <field name="street">Urb. La Beatriz, Valera</field>
+            <field name="city">Valera</field>
+            <field name="phone">(0271) 235.10.47 / 235.12.19 (Fax) / 235.16.95 / 235.12.18 / 225.20.13</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_hospital_trujillo" model="res.partner">
+            <field name="name">Hospital Trujillo</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. 19 de Abril Edif. Principal y Edif. Yacambú</field>
+            <field name="city">Trujillo</field>
+            <field name="phone">(0272) 236.74.92 (Fax) / 236.43.93</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_nuestra_senora_paz" model="res.partner">
+            <field name="name">Ambulatorio Nuestra Señora de la Paz</field>
+            <field name="is_company">True</field>
+            <field name="street">Final calle 10 entre Av. 16 y 17, barrio 5 de Mayo, Valera</field>
+            <field name="city">Valera</field>
+            <field name="phone">(0271) 225.47.63 / 225.49.72 / 225.27.08</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_valera" model="res.partner">
+            <field name="name">Ambulatorio Valera</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. 6 frente al liceo Rafael Rangel, Edif. Continental, Piso 1</field>
+            <field name="city">Valera</field>
+            <field name="phone">(0271) 225.25.69 (Fax) / 225.20.30 / 225.18.34</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_bocono" model="res.partner">
+            <field name="name">Ambulatorio Boconó (Valera)</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Carlos José Miliani, Centro de Servicios Campesinos Tiscachi</field>
+            <field name="city">Boconó</field>
+            <field name="phone">(0272) 652.10.10</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- CENTROS IVSS - ESTADO ARAGUA -->
+        <!-- ============================================ -->
+        
+        <record id="ivss_hospital_jose_maria_carabano" model="res.partner">
+            <field name="name">Hospital Dr. José María Carabaño Tosta</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Principal de San José, cerca del Terminal de pasajero</field>
+            <field name="city">Maracay</field>
+            <field name="phone">(0243) 236.53.76 /236.46.29 / 236.28.32</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_hospital_jose_antonio_vargas" model="res.partner">
+            <field name="name">Hospital José Antonio Vargas</field>
+            <field name="is_company">True</field>
+            <field name="street">Urbanización La Ovallera, Frente a la Base Sucre</field>
+            <field name="city">Palo Negro</field>
+            <field name="phone">(0243) 267.30.80 / 267.23.39</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_limon" model="res.partner">
+            <field name="name">Centro Ambulatorio El Limón</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Universidad, cruce con Av. Principal de Caña de Azúcar</field>
+            <field name="city">El Limón</field>
+            <field name="phone">(0243) 283.30.09 / 283.89.21 / 283.61.78</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_negra_matea" model="res.partner">
+            <field name="name">Centro Ambulatorio Negra Matea</field>
+            <field name="is_company">True</field>
+            <field name="street">Calle Pichincha, cruce con calle infantil, Santa Rosa, Maracay</field>
+            <field name="city">Maracay</field>
+            <field name="phone">(0243) 554.81.34 / 554.22.24</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_luis_richard_diaz" model="res.partner">
+            <field name="name">Centro Ambulatorio Dr. Luis Richard Díaz</field>
+            <field name="is_company">True</field>
+            <field name="street">Urb. Las Mercedes, al lado del Hospital Dr. José M. Benítez, La Victoria</field>
+            <field name="city">La Victoria</field>
+            <field name="phone">(0244) 321.24.64 / 321.12.86 /321.86.09/ Fax: 323.95.67</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_francisco_chico_matos" model="res.partner">
+            <field name="name">Centro Ambulatorio Francisco Chico Matos</field>
+            <field name="is_company">True</field>
+            <field name="street">Calle Lazo, zona industrial Corinsa, Cagua</field>
+            <field name="city">Cagua</field>
+            <field name="phone">(0244) 396.34.90 (Fax) / 396.35.23 / 396.34.70</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- CENTROS IVSS - ESTADO ZULIA -->
+        <!-- ============================================ -->
+        
+        <record id="ivss_hospital_adolfo_pons" model="res.partner">
+            <field name="name">Hospital Dr. Adolfo Pons</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Fuerzas Armadas, sector Canchancha, Maracaibo</field>
+            <field name="city">Maracaibo</field>
+            <field name="phone">(0261) 741.18.90 / 742.85.11</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_hospital_manuel_noriega_trigo" model="res.partner">
+            <field name="name">Hospital Dr. Manuel Noriega Trigo</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Principal Urb. San Felipe, Municipo San Francisco, Maracaibo</field>
+            <field name="city">Maracaibo</field>
+            <field name="phone">(0261) 761.34.74 / 761.31.80 / 761.34.63 / 761.30.66 / 7613421 / 7613131 / 7613296</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_hospital_pedro_garcia_clara" model="res.partner">
+            <field name="name">Hospital Dr. Pedro García Clara</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. 34 con Calle "L" Ciudad Ojeda</field>
+            <field name="city">Ciudad Ojeda</field>
+            <field name="phone">(0265) 662.21.95 / 662.21.91 / 415.02.33 /6321636 / 8086541</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_sur_maracaibo" model="res.partner">
+            <field name="name">Ambulatorio Sur Maracaibo</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. 7 Calle Vargas, Sector las Veritas, Antiguo Edif. Cruz Roja, al lado del Museo Rafael Urdaneta Maracaibo</field>
+            <field name="city">Maracaibo</field>
+            <field name="phone">(0261) 722.93.73 (Fax) / 722.92.35 / 722.42.97</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_sabaneta" model="res.partner">
+            <field name="name">Ambulatorio Sabaneta</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Sabaneta Larga, Calle 100 Maracaibo</field>
+            <field name="city">Maracaibo</field>
+            <field name="phone">(0261) 723.71.29 / 723.72.89 / 723.51.16 / 723.72.89 / 723.73.68</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_santa_rita_zulia" model="res.partner">
+            <field name="name">Ambulatorio Santa Rita</field>
+            <field name="is_company">True</field>
+            <field name="street">Calle la Planta, Sector el Cañon a dos Cuadra del Cuerpo de Bombero Santa Rita</field>
+            <field name="city">Santa Rita</field>
+            <field name="phone">(0264) 934.15.90 / 934.11.30</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_cabimas" model="res.partner">
+            <field name="name">Ambulatorio de Cabimas</field>
+            <field name="is_company">True</field>
+            <field name="street">Barrio 19 de Abril Av. 32, Diagonal a Corpoelec Cabima</field>
+            <field name="city">Cabimas</field>
+            <field name="phone">(0264) 261.18.55 / 261.09.81</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_ciudad_ojeda" model="res.partner">
+            <field name="name">Ambulatorio Ciudad Ojeda</field>
+            <field name="is_company">True</field>
+            <field name="street">Calle Santa Mónica al lado del Anti Canceroso, Ciudad Ojeda</field>
+            <field name="city">Ciudad Ojeda</field>
+            <field name="phone">(0265) 641.26.14 / 641.17.65</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_concepcion" model="res.partner">
+            <field name="name">Ambulatorio La Concepción</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Principal La Concepción, Campo Paraiso, La Concepción</field>
+            <field name="city">La Concepción</field>
+            <field name="phone">(0262) 243.29.90 / 243.27.96/ / 243.27.31</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+        <record id="ivss_ambulatorio_norte_maracaibo" model="res.partner">
+            <field name="name">Ambulatorio Norte de Maracaibo</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Guajira Diagonal casa de Italia sector san jacinto, vía el mojan Maracaibo</field>
+            <field name="city">Maracaibo</field>
+            <field name="phone">(0261) 757.04.32 / 757.40.80/ (Fax) 757.42.10</field>
+            <field name="category_id" eval="[(4, ref('partner_category_ivss'))]"/>
+        </record>
+
+    </data>
+</odoo>
+
