@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record id="oh_relocation_result_adapt" model="oh.relocation.result">
+            <field name="name">Adaptación/Restricción Permanente</field>
+            <field name="code">ADAPT</field>
+            <field name="description">El trabajador es apto para su puesto habitual, pero requiere adaptaciones ergonómicas o restricciones específicas y permanentes de tareas.</field>
+            <field name="is_permanent">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_relocation_result_permanent" model="oh.relocation.result">
+            <field name="name">Reubicación Permanente</field>
+            <field name="code">PERM</field>
+            <field name="description">Se requiere un cambio de puesto de trabajo definitivo, adaptado a las capacidades residuales del trabajador, por recomendación médica.</field>
+            <field name="is_permanent">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_relocation_result_temporary" model="oh.relocation.result">
+            <field name="name">Reubicación Temporal</field>
+            <field name="code">TEMP</field>
+            <field name="description">Se requiere una reubicación a un puesto de trabajo alterno por un período limitado (por ejemplo, rehabilitación o convalecencia), con fecha de reevaluación.</field>
+            <field name="is_permanent">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

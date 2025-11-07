@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record id="oh_limitation_no_lift_weight" model="oh.limitation">
+            <field name="name">No levantar peso > 5 kg</field>
+            <field name="description">Limitación de carga máxima de manipulación manual. Aplica a trabajadores con patologías osteomusculares de columna o hernias.</field>
+            <field name="is_critical">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_limitation_no_repetitive_movements" model="oh.limitation">
+            <field name="name">Evitar movimientos repetitivos (brazos/manos)</field>
+            <field name="description">Restricción total de tareas que involucren ciclos rápidos y continuos de extremidades superiores. Aplica a diagnóstico de Síndrome del Túnel Carpiano o tendinitis.</field>
+            <field name="is_critical">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_limitation_no_standing" model="oh.limitation">
+            <field name="name">No permanecer de pie > 2 horas</field>
+            <field name="description">Limitación del tiempo de bipedestación continua. Aplica en casos de insuficiencia venosa, problemas de rodilla o tobillo. Requiere pausas activas o puesto con asiento.</field>
+            <field name="is_critical">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_limitation_no_extreme_temperature" model="oh.limitation">
+            <field name="name">Evitar exposición a frío/calor extremo</field>
+            <field name="description">Restricción de trabajar en áreas con temperaturas significativamente altas o bajas. Aplica a personas con patologías cardiovasculares o respiratorias.</field>
+            <field name="is_critical">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_limitation_no_stairs" model="oh.limitation">
+            <field name="name">Restricción de ascenso/descenso de escaleras</field>
+            <field name="description">Prohibición o limitación del uso de escaleras o andamios. Aplica a trabajadores con trastornos de equilibrio o movilidad reducida.</field>
+            <field name="is_critical">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_limitation_no_hand_arm_vibration" model="oh.limitation">
+            <field name="name">No uso de Vibración de mano-brazo</field>
+            <field name="description">Restricción de utilizar herramientas eléctricas o neumáticas que generen vibraciones de alto impacto en las manos.</field>
+            <field name="is_critical">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_limitation_screen_time_limit" model="oh.limitation">
+            <field name="name">Límite de tiempo frente a pantalla (T.V.D.)</field>
+            <field name="description">Restricción del tiempo máximo continuo de trabajo con pantallas de visualización de datos (T.V.D.). Aplica a fatiga visual severa, migrañas o patologías oculares específicas.</field>
+            <field name="is_critical">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_limitation_no_high_cognitive_demand" model="oh.limitation">
+            <field name="name">Evitar tareas de alta demanda cognitiva</field>
+            <field name="description">Restricción o reducción de tareas que requieran concentración intensa y prolongada o manejo de múltiples prioridades. Aplica en casos de 'burnout' o trastornos neurológicos/psicosociales.</field>
+            <field name="is_critical">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_limitation_no_driving" model="oh.limitation">
+            <field name="name">No conducir vehículos (trabajo)</field>
+            <field name="description">Prohibición de operar vehículos motorizados como parte de las funciones laborales (ej: visitas externas o transporte). Aplica por medicación o condiciones médicas que afecten el estado de alerta.</field>
+            <field name="is_critical">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

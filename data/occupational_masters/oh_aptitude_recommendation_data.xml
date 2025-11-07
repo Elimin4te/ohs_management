@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Pre-Empleo -->
+        <record id="oh_aptitude_recommendation_pre_complementary_exams" model="oh.aptitude.recommendation">
+            <field name="name">Exámenes complementarios</field>
+            <field name="evaluation_type">pre_employment</field>
+            <field name="description">Solicitud de pruebas médicas adicionales específicas para confirmar la aptitud.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_aptitude_recommendation_pre_not_fit_temporary" model="oh.aptitude.recommendation">
+            <field name="name">No apto temporal</field>
+            <field name="evaluation_type">pre_employment</field>
+            <field name="description">Se pospone la decisión de aptitud hasta la corrección o tratamiento de una condición de salud detectada.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_aptitude_recommendation_pre_specialist_interview" model="oh.aptitude.recommendation">
+            <field name="name">Entrevista con especialista</field>
+            <field name="evaluation_type">pre_employment</field>
+            <field name="description">El candidato debe ser evaluado por un médico especialista antes de emitir el dictamen final de aptitud.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Periódica -->
+        <record id="oh_aptitude_recommendation_periodic_review_6_months" model="oh.aptitude.recommendation">
+            <field name="name">Revisión en 6 Meses</field>
+            <field name="evaluation_type">periodic</field>
+            <field name="description">Se recomienda una nueva evaluación médica ocupacional en un plazo corto para seguimiento de una condición crónica o control de salud.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_aptitude_recommendation_periodic_refer_physiotherapy" model="oh.aptitude.recommendation">
+            <field name="name">Referir a Tratamiento Fisioterapia</field>
+            <field name="evaluation_type">periodic</field>
+            <field name="description">El trabajador presenta una patología osteomuscular que requiere rehabilitación externa.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_aptitude_recommendation_periodic_postural_training" model="oh.aptitude.recommendation">
+            <field name="name">Capacitación sobre Higiene Postural</field>
+            <field name="evaluation_type">periodic</field>
+            <field name="description">Se requiere que el trabajador reciba formación específica sobre ergonomía y posturas correctas en su puesto de trabajo.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Post-Vacaciones -->
+        <record id="oh_aptitude_recommendation_post_safety_routines" model="oh.aptitude.recommendation">
+            <field name="name">Énfasis en Rutinas de Seguridad</field>
+            <field name="evaluation_type">post_vacation</field>
+            <field name="description">Se recomienda un recordatorio y refuerzo de los procedimientos de seguridad específicos del puesto.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_aptitude_recommendation_post_immediate_medical_review" model="oh.aptitude.recommendation">
+            <field name="name">Revisión Médica inmediata</field>
+            <field name="evaluation_type">post_vacation</field>
+            <field name="description">El trabajador reportó condiciones de salud durante las vacaciones que requieren una evaluación médica clínica inmediata antes de retomar funciones.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Reintegración -->
+        <record id="oh_aptitude_recommendation_reintegration_progressive" model="oh.aptitude.recommendation">
+            <field name="name">Reintegración Progresiva</field>
+            <field name="evaluation_type">reintegration</field>
+            <field name="description">Se recomienda que el trabajador retome sus funciones con una carga de trabajo reducida temporalmente o con horario parcial.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_aptitude_recommendation_reintegration_social_work" model="oh.aptitude.recommendation">
+            <field name="name">Referir a Trabajo Social</field>
+            <field name="evaluation_type">reintegration</field>
+            <field name="description">Se recomienda la intervención de trabajo social para evaluar el entorno socio-familiar y apoyar el proceso de reintegración.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_aptitude_recommendation_reintegration_weekly_control" model="oh.aptitude.recommendation">
+            <field name="name">Control semanal con Medicina Ocupacional</field>
+            <field name="evaluation_type">reintegration</field>
+            <field name="description">Se requiere un seguimiento médico más frecuente para monitorear la adaptación a las tareas y el cumplimiento de restricciones.</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

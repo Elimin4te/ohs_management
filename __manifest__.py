@@ -36,11 +36,16 @@
         # Security files
         'security/ir.model.access.csv',
         
-        # Default data
-        'data/oh_medicine_via_data.xml',
-        'data/oh_diagnosis_data.xml',
-        'data/oh_rest_origin_data.xml',
-        'data/oh_specialty_data.xml',
+        # Default data - Occupational Masters
+        'data/occupational_masters/oh_relocation_result_data.xml',
+        'data/occupational_masters/oh_limitation_data.xml',
+        'data/occupational_masters/oh_aptitude_recommendation_data.xml',
+        'data/occupational_masters/oh_rest_origin_data.xml',
+        
+        # Default data - Clinical Masters
+        'data/clinical_masters/oh_medicine_via_data.xml',
+        'data/clinical_masters/oh_diagnosis_data.xml',
+        'data/clinical_masters/oh_specialty_data.xml',
         
         # Menu Configuration
         'views/menu_configuration_view.xml',
