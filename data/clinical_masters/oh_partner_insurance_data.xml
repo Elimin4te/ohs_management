@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Categoría de Contacto para Aseguradoras -->
+        <record id="partner_category_insurance" model="res.partner.category">
+            <field name="name">Aseguradora</field>
+        </record>
+
+    </data>
+</odoo>
+

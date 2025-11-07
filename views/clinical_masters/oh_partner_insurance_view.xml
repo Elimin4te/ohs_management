@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Vista de Árbol para Centros IVSS -->
-    <record id="view_oh_partner_ivss_tree" model="ir.ui.view">
-        <field name="name">res.partner.tree.ivss</field>
+    <!-- Vista de Árbol para Aseguradoras -->
+    <record id="view_oh_partner_insurance_tree" model="ir.ui.view">
+        <field name="name">res.partner.tree.insurance</field>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">
-            <tree string="Centros IVSS">
-                <field name="name" string="Nombre del Centro"/>
+            <tree string="Aseguradoras">
+                <field name="name" string="Nombre de la Aseguradora"/>
                 <field name="street" string="Dirección"/>
                 <field name="city" string="Ciudad"/>
                 <field name="phone" string="Teléfono"/>
@@ -17,9 +17,9 @@
         </field>
     </record>
 
-    <!-- Vista de Formulario para Centros IVSS -->
-    <record id="view_oh_partner_ivss_form" model="ir.ui.view">
-        <field name="name">res.partner.form.ivss</field>
+    <!-- Vista de Formulario para Aseguradoras -->
+    <record id="view_oh_partner_insurance_form" model="ir.ui.view">
+        <field name="name">res.partner.form.insurance</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
@@ -31,12 +31,12 @@
         </field>
     </record>
 
-    <!-- Vista de Búsqueda para Centros IVSS -->
-    <record id="view_oh_partner_ivss_search" model="ir.ui.view">
-        <field name="name">res.partner.search.ivss</field>
+    <!-- Vista de Búsqueda para Aseguradoras -->
+    <record id="view_oh_partner_insurance_search" model="ir.ui.view">
+        <field name="name">res.partner.search.insurance</field>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">
-            <search string="Centros IVSS">
+            <search string="Aseguradoras">
                 <field name="name" string="Nombre" filter_domain="['|', ('name', 'ilike', self), ('display_name', 'ilike', self)]"/>
                 <field name="city" string="Ciudad"/>
                 <field name="phone" string="Teléfono"/>
@@ -49,34 +49,34 @@
         </field>
     </record>
 
-    <!-- Acción de Ventana para Centros IVSS -->
-    <record id="action_oh_partner_ivss" model="ir.actions.act_window">
-        <field name="name">Centros IVSS</field>
+    <!-- Acción de Ventana para Aseguradoras -->
+    <record id="action_oh_partner_insurance" model="ir.actions.act_window">
+        <field name="name">Aseguradoras</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form</field>
         <field name="view_ids" eval="[(5, 0, 0),
-                                       (0, 0, {'view_mode': 'tree', 'view_id': ref('view_oh_partner_ivss_tree')}),
-                                       (0, 0, {'view_mode': 'form', 'view_id': ref('view_oh_partner_ivss_form')})]"/>
-        <field name="domain" eval="[('category_id', 'in', [ref('partner_category_ivss')])]"/>
-        <field name="context" eval="{'default_is_company': True, 'default_category_id': [(4, ref('partner_category_ivss'))]}"/>
+                                       (0, 0, {'view_mode': 'tree', 'view_id': ref('view_oh_partner_insurance_tree')}),
+                                       (0, 0, {'view_mode': 'form', 'view_id': ref('view_oh_partner_insurance_form')})]"/>
+        <field name="domain" eval="[('category_id', 'in', [ref('partner_category_insurance')])]"/>
+        <field name="context" eval="{'default_is_company': True, 'default_category_id': [(4, ref('partner_category_insurance'))]}"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Crear un nuevo centro IVSS
+                Crear una nueva aseguradora
             </p>
             <p>
-                Los Centros IVSS son hospitales, ambulatorios o centros de salud
-                del Instituto Venezolano de los Seguros Sociales donde se pueden
-                realizar evaluaciones médicas ocupacionales y gestionar reposos médicos.
+                Las aseguradoras son compañías de seguros que ofrecen cobertura médica
+                y de salud ocupacional para los empleados. Este catálogo permite gestionar
+                la información de contacto y los datos de las aseguradoras asociadas.
             </p>
         </field>
     </record>
 
-    <!-- Elemento de Menú para Centros IVSS -->
-    <menuitem id="menu_oh_partner_ivss"
-              name="Centros IVSS"
+    <!-- Elemento de Menú para Aseguradoras -->
+    <menuitem id="menu_oh_partner_insurance"
+              name="Aseguradoras"
               parent="menu_oh_clinical_masters"
-              action="action_oh_partner_ivss"
-              sequence="45"/>
+              action="action_oh_partner_insurance"
+              sequence="43"/>
 
 </odoo>
 
