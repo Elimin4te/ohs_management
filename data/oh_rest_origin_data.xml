@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record id="oh_rest_origin_common_illness" model="oh.rest.origin">
+            <field name="name">Enfermedad Común</field>
+            <field name="origin_type">common_illness</field>
+            <field name="description">Incapacidad temporal por enfermedad no laboral (IVSS).</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_rest_origin_common_accident" model="oh.rest.origin">
+            <field name="name">Accidente Común</field>
+            <field name="origin_type">common_accident</field>
+            <field name="description">Incapacidad temporal por accidente no laboral (IVSS).</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_rest_origin_professional_illness" model="oh.rest.origin">
+            <field name="name">Enfermedad Profesional</field>
+            <field name="origin_type">professional_illness</field>
+            <field name="description">Incapacidad temporal por enfermedad relacionada directamente con el trabajo (IVSS).</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_rest_origin_work_accident" model="oh.rest.origin">
+            <field name="name">Accidente de Trabajo</field>
+            <field name="origin_type">work_accident</field>
+            <field name="description">Incapacidad temporal por accidente ocurrido en el lugar o con ocasión del trabajo (IVSS).</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_rest_origin_maternity" model="oh.rest.origin">
+            <field name="name">Reposo por Maternidad</field>
+            <field name="origin_type">maternity</field>
+            <field name="description">Reposo obligatorio pre y post-natal (IVSS).</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

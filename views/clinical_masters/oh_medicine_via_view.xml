@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol para oh.medicine.via -->
+    <record id="view_oh_medicine_via_tree" model="ir.ui.view">
+        <field name="name">oh.medicine.via.tree</field>
+        <field name="model">oh.medicine.via</field>
+        <field name="arch" type="xml">
+            <tree string="Vías de Administración" editable="bottom">
+                <field name="via_type" required="1"/>
+                <field name="name" required="1"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario para oh.medicine.via -->
+    <record id="view_oh_medicine_via_form" model="ir.ui.view">
+        <field name="name">oh.medicine.via.form</field>
+        <field name="model">oh.medicine.via</field>
+        <field name="arch" type="xml">
+            <form string="Vía de Administración">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="via_type" required="1"/>
+                            <field name="name" required="1" placeholder="Ej: Vía Oral (VO), Intravenosa (IV)"/>
+                        </group>
+                        <group>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Ingrese el detalle o justificación de la vía de administración..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda para oh.medicine.via -->
+    <record id="view_oh_medicine_via_search" model="ir.ui.view">
+        <field name="name">oh.medicine.via.search</field>
+        <field name="model">oh.medicine.via</field>
+        <field name="arch" type="xml">
+            <search string="Vías de Administración">
+                <field name="name" string="Vía de Administración"/>
+                <field name="description" string="Descripción"/>
+                <field name="via_type" string="Tipo de Vía"/>
+                <filter string="Activas" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Enteral" name="enteral" domain="[('via_type', '=', 'enteral')]"/>
+                <filter string="Parenteral" name="parenteral" domain="[('via_type', '=', 'parenteral')]"/>
+                <filter string="Tópica" name="topical" domain="[('via_type', '=', 'topical')]"/>
+                <separator/>
+                <filter string="Archivadas" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana para oh.medicine.via -->
+    <record id="action_oh_medicine_via" model="ir.actions.act_window">
+        <field name="name">Vías de Administración</field>
+        <field name="res_model">oh.medicine.via</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_medicine_via_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva vía de administración
+            </p>
+            <p>
+                Las vías de administración definen los métodos por los cuales
+                se pueden administrar las medicinas (enteral, parenteral, tópica).
+                Estas vías se asocian a los productos marcados como medicinas.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú para oh.medicine.via -->
+    <menuitem id="menu_oh_medicine_via"
+              name="Vías de Administración"
+              parent="menu_oh_clinical_masters"
+              action="action_oh_medicine_via"
+              sequence="10"/>
+
+</odoo>
+

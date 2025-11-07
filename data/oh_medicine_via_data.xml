@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- ============================================ -->
+        <!-- VÍAS DE ADMINISTRACIÓN ENTERAL -->
+        <!-- ============================================ -->
+        
+        <record id="oh_via_oral" model="oh.medicine.via">
+            <field name="name">Vía Oral (VO)</field>
+            <field name="via_type">enteral</field>
+            <field name="description">Medicamento ingerido por la boca (comprimidos, cápsulas, jarabes). Absorción en el intestino.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_sublingual" model="oh.medicine.via">
+            <field name="name">Vía Sublingual</field>
+            <field name="via_type">enteral</field>
+            <field name="description">Fármaco colocado debajo de la lengua. Absorción rápida evitando el paso hepático. Efecto inmediato.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_rectal" model="oh.medicine.via">
+            <field name="name">Vía Rectal</field>
+            <field name="via_type">enteral</field>
+            <field name="description">Administración a través del ano (supositorios, enemas). Útil cuando la vía oral no es posible.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- VÍAS DE ADMINISTRACIÓN PARENTERAL -->
+        <!-- ============================================ -->
+        
+        <record id="oh_via_intravenosa" model="oh.medicine.via">
+            <field name="name">Vía Intravenosa (IV)</field>
+            <field name="via_type">parenteral</field>
+            <field name="description">Inyección directa en vena. Vía más rápida con acción inmediata y controlada.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_intramuscular" model="oh.medicine.via">
+            <field name="name">Vía Intramuscular (IM)</field>
+            <field name="via_type">parenteral</field>
+            <field name="description">Inyección en músculo (brazo o glúteo). Absorción rápida por alta vascularización.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_subcutanea" model="oh.medicine.via">
+            <field name="name">Vía Subcutánea (SC)</field>
+            <field name="via_type">parenteral</field>
+            <field name="description">Inyección en tejido graso subcutáneo. Absorción más lenta que IV e IM.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_intradermica" model="oh.medicine.via">
+            <field name="name">Vía Intradérmica</field>
+            <field name="via_type">parenteral</field>
+            <field name="description">Inyección en la dermis. Usada para pruebas de sensibilidad y vacunas.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_intratecal" model="oh.medicine.via">
+            <field name="name">Vía Intratecal</field>
+            <field name="via_type">parenteral</field>
+            <field name="description">Administración alrededor de la médula espinal. Para anestesia regional.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_intraarterial" model="oh.medicine.via">
+            <field name="name">Vía Intraarterial</field>
+            <field name="via_type">parenteral</field>
+            <field name="description">Inyección en arteria. Usada en procedimientos especializados y quimioterapia regional.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_intraarticular" model="oh.medicine.via">
+            <field name="name">Vía Intraarticular</field>
+            <field name="via_type">parenteral</field>
+            <field name="description">Inyección en articulación. Tratamiento local de enfermedades articulares.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- VÍAS DE ADMINISTRACIÓN TÓPICA -->
+        <!-- ============================================ -->
+        
+        <record id="oh_via_topica_cutanea" model="oh.medicine.via">
+            <field name="name">Vía Tópica/Cutánea</field>
+            <field name="via_type">topical</field>
+            <field name="description">Aplicación directa sobre la piel (cremas, pomadas, geles). Efecto local.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_transdermica" model="oh.medicine.via">
+            <field name="name">Vía Transdérmica</field>
+            <field name="via_type">topical</field>
+            <field name="description">Aplicación sobre la piel mediante parches. Absorción para efecto sistémico.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_oftalmica" model="oh.medicine.via">
+            <field name="name">Vía Oftálmica</field>
+            <field name="via_type">topical</field>
+            <field name="description">Aplicación en el ojo (colirios, pomadas). Tratamiento de enfermedades oculares.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_otica" model="oh.medicine.via">
+            <field name="name">Vía Ótica</field>
+            <field name="via_type">topical</field>
+            <field name="description">Aplicación en el oído (gotas). Tratamiento de infecciones e inflamación del oído.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_nasal_intranasal" model="oh.medicine.via">
+            <field name="name">Vía Nasal/Intranasal</field>
+            <field name="via_type">topical</field>
+            <field name="description">Administración por la nariz (gotas, nebulizadores). Efecto local o sistémico.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_inhalatoria" model="oh.medicine.via">
+            <field name="name">Vía Inhalatoria</field>
+            <field name="via_type">topical</field>
+            <field name="description">Inhalación hacia los pulmones (aerosoles, inhaladores). Para enfermedades respiratorias.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_via_vaginal" model="oh.medicine.via">
+            <field name="name">Vía Vaginal</field>
+            <field name="via_type">topical</field>
+            <field name="description">Administración en la vagina (óvulos, cremas). Tratamiento de infecciones o aplicación de hormonas.</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

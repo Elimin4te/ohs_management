@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_relocation_result_tree" model="ir.ui.view">
+        <field name="name">oh.relocation.result.tree</field>
+        <field name="model">oh.relocation.result</field>
+        <field name="arch" type="xml">
+            <tree string="Resultados de Reubicación" editable="bottom">
+                <field name="code" required="1"/>
+                <field name="name" required="1"/>
+                <field name="is_permanent"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_relocation_result_form" model="ir.ui.view">
+        <field name="name">oh.relocation.result.form</field>
+        <field name="model">oh.relocation.result</field>
+        <field name="arch" type="xml">
+            <form string="Resultado de Reubicación Laboral">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code" required="1"/>
+                            <field name="name" required="1"/>
+                        </group>
+                        <group>
+                            <field name="is_permanent"/>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Ingrese una descripción o justificación del resultado de reubicación..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_relocation_result_search" model="ir.ui.view">
+        <field name="name">oh.relocation.result.search</field>
+        <field name="model">oh.relocation.result</field>
+        <field name="arch" type="xml">
+            <search string="Resultados de Reubicación">
+                <field name="name" string="Nombre"/>
+                <field name="code" string="Código"/>
+                <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Permanentes" name="permanent" domain="[('is_permanent', '=', True)]"/>
+                <filter string="Temporales" name="temporary" domain="[('is_permanent', '=', False)]"/>
+                <separator/>
+                <filter string="Archivados" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_relocation_result" model="ir.actions.act_window">
+        <field name="name">Resultados de Reubicación Laboral</field>
+        <field name="res_model">oh.relocation.result</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_relocation_result_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear un nuevo resultado de reubicación
+            </p>
+            <p>
+                Los resultados de reubicación laboral definen los posibles resultados
+                cuando un empleado es reubicado por razones de salud ocupacional.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_relocation_result"
+              name="Resultados de Reubicación"
+              parent="menu_oh_occupational_masters"
+              action="action_oh_relocation_result"
+              sequence="10"/>
+
+</odoo>
+

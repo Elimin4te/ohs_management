@@ -19,6 +19,8 @@
         * hr (Gestión de Recursos Humanos)
         * hr_recruitment (Reclutamiento)
         * stock (Inventario)
+        * product (Productos)
+        * uom (Unidades de Medida)
     """,
     'author': 'Ricardo Marín',
     'depends': [
@@ -26,13 +28,34 @@
         'hr',
         'hr_recruitment',
         'stock',
+        'product',
+        'uom',
     ],
     'data': [
-        # Security files will be added here
-        # 'security/ir.model.access.csv',
+        # Security files
+        'security/ir.model.access.csv',
         
-        # Views will be added here
-        # 'views/ohs_views.xml',
+        # Default data
+        'data/oh_medicine_via_data.xml',
+        'data/oh_diagnosis_data.xml',
+        'data/oh_rest_origin_data.xml',
+        'data/oh_specialty_data.xml',
+        
+        # Menu Configuration
+        'views/menu_configuration_view.xml',
+        
+        # Occupational Masters Views
+        'views/occupational_masters/oh_relocation_result_view.xml',
+        'views/occupational_masters/oh_limitation_view.xml',
+        'views/occupational_masters/oh_aptitude_recommendation_view.xml',
+        'views/occupational_masters/oh_origin_view.xml',
+        
+        # Clinical Masters Views
+        'views/clinical_masters/oh_medicine_via_view.xml',
+        'views/clinical_masters/oh_product_extension_view.xml',
+        'views/clinical_masters/oh_exam_view.xml',
+        'views/clinical_masters/oh_diagnosis_view.xml',
+        'views/clinical_masters/oh_specialty_view.xml',
     ],
     'installable': True,
     'application': True,

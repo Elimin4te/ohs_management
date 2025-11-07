@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_aptitude_recommendation_tree" model="ir.ui.view">
+        <field name="name">oh.aptitude.recommendation.tree</field>
+        <field name="model">oh.aptitude.recommendation</field>
+        <field name="arch" type="xml">
+            <tree string="Recomendaciones de Aptitud" editable="bottom">
+                <field name="evaluation_type" required="1"/>
+                <field name="name" required="1"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_aptitude_recommendation_form" model="ir.ui.view">
+        <field name="name">oh.aptitude.recommendation.form</field>
+        <field name="model">oh.aptitude.recommendation</field>
+        <field name="arch" type="xml">
+            <form string="Recomendación de Aptitud">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="evaluation_type" required="1"/>
+                            <field name="name" required="1" placeholder="Ej: Revisión en 3 Meses, Referir a Traumatología"/>
+                        </group>
+                        <group>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Ingrese el detalle o justificación para la aplicación de la recomendación..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_aptitude_recommendation_search" model="ir.ui.view">
+        <field name="name">oh.aptitude.recommendation.search</field>
+        <field name="model">oh.aptitude.recommendation</field>
+        <field name="arch" type="xml">
+            <search string="Recomendaciones de Aptitud">
+                <field name="name" string="Recomendación"/>
+                <field name="description" string="Descripción"/>
+                <field name="evaluation_type" string="Tipo de Evaluación"/>
+                <filter string="Activas" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Pre-Empleo" name="pre_employment" domain="[('evaluation_type', '=', 'pre_employment')]"/>
+                <filter string="Periódica" name="periodic" domain="[('evaluation_type', '=', 'periodic')]"/>
+                <filter string="Post-Vacaciones" name="post_vacation" domain="[('evaluation_type', '=', 'post_vacation')]"/>
+                <filter string="Reintegración" name="reintegration" domain="[('evaluation_type', '=', 'reintegration')]"/>
+                <separator/>
+                <filter string="Archivadas" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_aptitude_recommendation" model="ir.actions.act_window">
+        <field name="name">Recomendaciones de Aptitud</field>
+        <field name="res_model">oh.aptitude.recommendation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_aptitude_recommendation_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva recomendación de aptitud
+            </p>
+            <p>
+                Las recomendaciones de aptitud definen las acciones o seguimientos
+                que deben realizarse para los empleados después de una evaluación médica,
+                clasificadas por tipo de evaluación (pre-empleo, periódica, post-vacaciones, reintegración).
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_aptitude_recommendation"
+              name="Recomendaciones de Aptitud"
+              parent="menu_oh_occupational_masters"
+              action="action_oh_aptitude_recommendation"
+              sequence="30"/>
+
+</odoo>
+

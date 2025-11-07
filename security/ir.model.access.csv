@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_oh_relocation_result_user,oh.relocation.result.user,model_oh_relocation_result,base.group_user,1,1,1,1
+access_oh_limitation_user,oh.limitation.user,model_oh_limitation,base.group_user,1,1,1,1
+access_oh_aptitude_recommendation_user,oh.aptitude.recommendation.user,model_oh_aptitude_recommendation,base.group_user,1,1,1,1
+access_oh_rest_origin_user,oh.rest.origin.user,model_oh_rest_origin,base.group_user,1,1,1,1
+access_oh_medicine_via_user,oh.medicine.via.user,model_oh_medicine_via,base.group_user,1,1,1,1
+access_oh_exam_user,oh.exam.user,model_oh_exam,base.group_user,1,1,1,1
+access_oh_diagnosis_user,oh.diagnosis.user,model_oh_diagnosis,base.group_user,1,1,1,1
+access_oh_specialty_user,oh.specialty.user,model_oh_specialty,base.group_user,1,1,1,1
+

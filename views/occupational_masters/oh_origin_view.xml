@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_rest_origin_tree" model="ir.ui.view">
+        <field name="name">oh.rest.origin.tree</field>
+        <field name="model">oh.rest.origin</field>
+        <field name="arch" type="xml">
+            <tree string="Origen/Causa de Reposo (IVSS)" editable="bottom">
+                <field name="origin_type" required="1"/>
+                <field name="name" required="1"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_rest_origin_form" model="ir.ui.view">
+        <field name="name">oh.rest.origin.form</field>
+        <field name="model">oh.rest.origin</field>
+        <field name="arch" type="xml">
+            <form string="Origen/Causa de Reposo (IVSS)">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="origin_type" required="1"/>
+                            <field name="name" required="1" placeholder="Ej: Accidente de Trabajo, Enfermedad Común"/>
+                        </group>
+                        <group>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Ingrese el detalle o justificación para la clasificación..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_rest_origin_search" model="ir.ui.view">
+        <field name="name">oh.rest.origin.search</field>
+        <field name="model">oh.rest.origin</field>
+        <field name="arch" type="xml">
+            <search string="Origen/Causa de Reposo (IVSS)">
+                <field name="name" string="Nombre"/>
+                <field name="description" string="Descripción"/>
+                <field name="origin_type" string="Tipo de Origen"/>
+                <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Enfermedad Común" name="common_illness" domain="[('origin_type', '=', 'common_illness')]"/>
+                <filter string="Accidente Común" name="common_accident" domain="[('origin_type', '=', 'common_accident')]"/>
+                <filter string="Enfermedad Profesional" name="professional_illness" domain="[('origin_type', '=', 'professional_illness')]"/>
+                <filter string="Accidente de Trabajo" name="work_accident" domain="[('origin_type', '=', 'work_accident')]"/>
+                <filter string="Maternidad" name="maternity" domain="[('origin_type', '=', 'maternity')]"/>
+                <separator/>
+                <filter string="Archivados" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_rest_origin" model="ir.actions.act_window">
+        <field name="name">Origen/Causa de Reposo (IVSS)</field>
+        <field name="res_model">oh.rest.origin</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_rest_origin_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear un nuevo origen/causa de reposo
+            </p>
+            <p>
+                Los orígenes/causas de reposo definen la clasificación principal según IVSS
+                para diferentes situaciones (enfermedades comunes, accidentes de trabajo,
+                enfermedades profesionales, maternidad, etc.).
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_rest_origin"
+              name="Origen/Causa de Reposo (IVSS)"
+              parent="menu_oh_occupational_masters"
+              action="action_oh_rest_origin"
+              sequence="40"/>
+
+</odoo>
+

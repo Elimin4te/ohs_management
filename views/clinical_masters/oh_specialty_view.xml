@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_specialty_tree" model="ir.ui.view">
+        <field name="name">oh.specialty.tree</field>
+        <field name="model">oh.specialty</field>
+        <field name="arch" type="xml">
+            <tree string="Especialidades Médicas" editable="bottom">
+                <field name="name" required="1"/>
+                <field name="is_occupational"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_specialty_form" model="ir.ui.view">
+        <field name="name">oh.specialty.form</field>
+        <field name="model">oh.specialty</field>
+        <field name="arch" type="xml">
+            <form string="Especialidad Médica">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" placeholder="Ej: Medicina Ocupacional, Medicina General"/>
+                        </group>
+                        <group>
+                            <field name="is_occupational"/>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Ingrese el detalle de la formación o alcance de la especialidad..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_specialty_search" model="ir.ui.view">
+        <field name="name">oh.specialty.search</field>
+        <field name="model">oh.specialty</field>
+        <field name="arch" type="xml">
+            <search string="Especialidades Médicas">
+                <field name="name" string="Especialidad"/>
+                <field name="description" string="Descripción"/>
+                <filter string="Activas" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Salud Ocupacional" name="occupational" domain="[('is_occupational', '=', True)]"/>
+                <filter string="Otras Especialidades" name="other" domain="[('is_occupational', '=', False)]"/>
+                <separator/>
+                <filter string="Archivadas" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_specialty" model="ir.actions.act_window">
+        <field name="name">Especialidades Médicas</field>
+        <field name="res_model">oh.specialty</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_specialty_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva especialidad médica
+            </p>
+            <p>
+                Las especialidades médicas definen las áreas de formación y competencia
+                de los médicos y profesionales de la salud. Pueden clasificarse como
+                especialidades de Salud Ocupacional/SST o especialidades generales.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_specialty"
+              name="Especialidades Médicas"
+              parent="menu_oh_clinical_masters"
+              action="action_oh_specialty"
+              sequence="80"/>
+
+</odoo>
+

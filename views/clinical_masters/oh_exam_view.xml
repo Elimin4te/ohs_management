@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_exam_tree" model="ir.ui.view">
+        <field name="name">oh.exam.tree</field>
+        <field name="model">oh.exam</field>
+        <field name="arch" type="xml">
+            <tree string="Exámenes Médicos" editable="bottom">
+                <field name="exam_type" required="1"/>
+                <field name="code"/>
+                <field name="name" required="1"/>
+                <field name="is_pre_employment"/>
+                <field name="estimated_cost" sum="Costo Total"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_exam_form" model="ir.ui.view">
+        <field name="name">oh.exam.form</field>
+        <field name="model">oh.exam</field>
+        <field name="arch" type="xml">
+            <form string="Examen Médico">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="exam_type" required="1"/>
+                            <field name="code" placeholder="Ej: AUDI01"/>
+                            <field name="name" required="1" placeholder="Ej: Audiometría, Rayos X Tórax"/>
+                        </group>
+                        <group>
+                            <field name="is_pre_employment"/>
+                            <field name="is_active"/>
+                            <field name="estimated_cost"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Ingrese el detalle del examen o requisitos previos..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_exam_search" model="ir.ui.view">
+        <field name="name">oh.exam.search</field>
+        <field name="model">oh.exam</field>
+        <field name="arch" type="xml">
+            <search string="Exámenes Médicos">
+                <field name="name" string="Nombre"/>
+                <field name="code" string="Código"/>
+                <field name="exam_type" string="Tipo"/>
+                <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Pre-Ingreso" name="pre_employment" domain="[('is_pre_employment', '=', True)]"/>
+                <filter string="Laboratorio" name="lab" domain="[('exam_type', '=', 'lab')]"/>
+                <filter string="Imagenología" name="image" domain="[('exam_type', '=', 'image')]"/>
+                <filter string="Funcional" name="functional" domain="[('exam_type', '=', 'functional')]"/>
+                <filter string="Otros" name="other" domain="[('exam_type', '=', 'other')]"/>
+                <separator/>
+                <filter string="Archivados" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_exam" model="ir.actions.act_window">
+        <field name="name">Exámenes Médicos</field>
+        <field name="res_model">oh.exam</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_exam_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear un nuevo examen médico
+            </p>
+            <p>
+                Los exámenes médicos definen las pruebas y evaluaciones que se realizan
+                a los empleados, clasificados por tipo (laboratorio, imagenología, funcional, otros).
+                Pueden marcarse como requeridos en el protocolo de pre-ingreso.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_exam"
+              name="Exámenes Médicos"
+              parent="menu_oh_clinical_masters"
+              action="action_oh_exam"
+              sequence="20"/>
+
+</odoo>
+

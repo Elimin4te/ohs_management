@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- ============================================ -->
+        <!-- TRASTORNOS MÚSCULO-ESQUELÉTICOS -->
+        <!-- ============================================ -->
+        
+        <record id="oh_diagnosis_carpal_tunnel" model="oh.diagnosis">
+            <field name="name">Síndrome del Túnel Carpiano</field>
+            <field name="code">8C61.4</field>
+            <field name="description">Compresión del nervio mediano a nivel de la muñeca, causando dolor, entumecimiento y debilidad en la mano.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_tendinitis" model="oh.diagnosis">
+            <field name="name">Tendinitis/Tenosinovitis</field>
+            <field name="code">FA20</field>
+            <field name="description">Inflamación de los tendones y sus vainas, comúnmente afectando manos, brazos y hombros.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_lumbalgia" model="oh.diagnosis">
+            <field name="name">Lumbalgia Ocupacional</field>
+            <field name="code">MA80</field>
+            <field name="description">Dolor en la región lumbar de la espalda.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- ENFERMEDADES RESPIRATORIAS -->
+        <!-- ============================================ -->
+        
+        <record id="oh_diagnosis_asma_ocupacional" model="oh.diagnosis">
+            <field name="name">Asma Ocupacional</field>
+            <field name="code">CA20.1</field>
+            <field name="description">Enfermedad respiratoria caracterizada por inflamación de las vías respiratorias y obstrucción reversible del flujo de aire.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_rinitis_ocupacional" model="oh.diagnosis">
+            <field name="name">Rinitis Ocupacional Alérgica</field>
+            <field name="code">CA02.2</field>
+            <field name="description">Inflamación de la mucosa nasal de origen alérgico.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_neumonitis" model="oh.diagnosis">
+            <field name="name">Neumonitis por Hipersensibilidad</field>
+            <field name="code">CA223</field>
+            <field name="description">Enfermedad pulmonar intersticial causada por una reacción de hipersensibilidad a antígenos inhalados.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- ENFERMEDADES DE LA PIEL -->
+        <!-- ============================================ -->
+        
+        <record id="oh_diagnosis_dermatitis_irritativa" model="oh.diagnosis">
+            <field name="name">Dermatitis de Contacto Irritativa</field>
+            <field name="code">EK01.0</field>
+            <field name="description">Inflamación de la piel causada por contacto directo con sustancias irritantes.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_dermatitis_alergica" model="oh.diagnosis">
+            <field name="name">Dermatitis de Contacto Alérgica</field>
+            <field name="code">EK01.1</field>
+            <field name="description">Inflamación de la piel causada por una reacción alérgica de hipersensibilidad tipo IV.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- ENFERMEDADES INFECCIOSAS -->
+        <!-- ============================================ -->
+        
+        <record id="oh_diagnosis_brucelosis" model="oh.diagnosis">
+            <field name="name">Brucelosis</field>
+            <field name="code">1B95</field>
+            <field name="description">Enfermedad infecciosa zoonótica causada por bacterias del género Brucella.</field>
+            <field name="is_notifiable">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_ornitosis" model="oh.diagnosis">
+            <field name="name">Ornitosis/Psitacosis</field>
+            <field name="code">1D70</field>
+            <field name="description">Enfermedad infecciosa causada por Chlamydia psittaci, transmitida principalmente por aves.</field>
+            <field name="is_notifiable">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_aspergilosis" model="oh.diagnosis">
+            <field name="name">Aspergilosis</field>
+            <field name="code">1F20.Z</field>
+            <field name="description">Infección fúngica causada por hongos del género Aspergillus.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_tuberculosis_zoonotica" model="oh.diagnosis">
+            <field name="name">Tuberculosis Zoonótica</field>
+            <field name="code">1B10.1</field>
+            <field name="description">Enfermedad infecciosa causada por Mycobacterium bovis, transmitida principalmente desde animales a humanos.</field>
+            <field name="is_notifiable">True</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- TRASTORNOS OSTEOMUSCULARES ADICIONALES -->
+        <!-- ============================================ -->
+        
+        <record id="oh_diagnosis_epicondilitis" model="oh.diagnosis">
+            <field name="name">Epicondilitis Lateral (Codo de Tenista)</field>
+            <field name="code">FA40.1</field>
+            <field name="description">Inflamación de los tendones extensores en la parte lateral del codo.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_disco_lumbar" model="oh.diagnosis">
+            <field name="name">Trastornos de Disco Lumbar</field>
+            <field name="code">MA83</field>
+            <field name="description">Desplazamiento o degeneración de los discos intervertebrales en la región lumbar.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- ============================================ -->
+        <!-- AGENTES FÍSICOS -->
+        <!-- ============================================ -->
+        
+        <record id="oh_diagnosis_frio_extremo" model="oh.diagnosis">
+            <field name="name">Exposición Ocupacional al Frío Extremo</field>
+            <field name="code">ND50</field>
+            <field name="description">Efectos adversos para la salud resultantes de la exposición a temperaturas extremadamente bajas.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_perdida_audicion" model="oh.diagnosis">
+            <field name="name">Pérdida de la Audición</field>
+            <field name="code">AB51</field>
+            <field name="description">Disminución de la capacidad auditiva, parcial o total.</field>
+            <field name="is_notifiable">False</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_limitation_tree" model="ir.ui.view">
+        <field name="name">oh.limitation.tree</field>
+        <field name="model">oh.limitation</field>
+        <field name="arch" type="xml">
+            <tree string="Limitaciones Ocupacionales" editable="bottom">
+                <field name="name" required="1"/>
+                <field name="is_critical"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_limitation_form" model="ir.ui.view">
+        <field name="name">oh.limitation.form</field>
+        <field name="model">oh.limitation</field>
+        <field name="arch" type="xml">
+            <form string="Limitación Ocupacional">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" placeholder="Ej: No realizar movimientos repetitivos"/>
+                        </group>
+                        <group>
+                            <field name="is_critical"/>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" required="1" placeholder="Ingrese el detalle de la limitación: justificación y criterios de aplicación..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_limitation_search" model="ir.ui.view">
+        <field name="name">oh.limitation.search</field>
+        <field name="model">oh.limitation</field>
+        <field name="arch" type="xml">
+            <search string="Limitaciones Ocupacionales">
+                <field name="name" string="Restricción"/>
+                <field name="description" string="Descripción"/>
+                <filter string="Activas" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Críticas" name="critical" domain="[('is_critical', '=', True)]"/>
+                <filter string="No Críticas" name="non_critical" domain="[('is_critical', '=', False)]"/>
+                <separator/>
+                <filter string="Archivadas" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_limitation" model="ir.actions.act_window">
+        <field name="name">Limitaciones Ocupacionales</field>
+        <field name="res_model">oh.limitation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_limitation_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva limitación ocupacional
+            </p>
+            <p>
+                Las limitaciones ocupacionales definen restricciones que deben aplicarse
+                a los empleados por razones de salud ocupacional, incluyendo criterios
+                de aplicación y nivel de criticidad.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_limitation"
+              name="Limitaciones Ocupacionales"
+              parent="menu_oh_occupational_masters"
+              action="action_oh_limitation"
+              sequence="20"/>
+
+</odoo>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menú Principal de Configuración -->
+    <menuitem id="menu_oh_configuration"
+              name="Configuración"
+              parent="hr.menu_hr_root"
+              sequence="100"/>
+
+    <!-- Menú Maestros Ocupacionales -->
+    <menuitem id="menu_oh_occupational_masters"
+              name="Maestros Ocupacionales"
+              parent="menu_oh_configuration"
+              sequence="10"/>
+
+    <!-- Menú Maestros Clínicos -->
+    <menuitem id="menu_oh_clinical_masters"
+              name="Maestros Clínicos"
+              parent="menu_oh_configuration"
+              sequence="20"/>
+
+</odoo>
+
