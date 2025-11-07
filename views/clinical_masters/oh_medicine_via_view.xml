@@ -78,7 +78,7 @@
     <!-- Elemento de Menú para oh.medicine.via -->
     <menuitem id="menu_oh_medicine_via"
               name="Vías de Administración"
-              parent="menu_oh_clinical_masters"
+              parent="menu_oh_medicines"
               action="action_oh_medicine_via"
               sequence="10"/>
 

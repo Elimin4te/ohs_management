@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_medicine_brand_tree" model="ir.ui.view">
+        <field name="name">oh.medicine.brand.tree</field>
+        <field name="model">oh.medicine.brand</field>
+        <field name="arch" type="xml">
+            <tree string="Marcas de Medicinas">
+                <field name="name" required="1"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_medicine_brand_form" model="ir.ui.view">
+        <field name="name">oh.medicine.brand.form</field>
+        <field name="model">oh.medicine.brand</field>
+        <field name="arch" type="xml">
+            <form string="Marca de Medicina">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" placeholder="Ej: Tylenol, Advil, Voltaren"/>
+                        </group>
+                        <group>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Ingrese información adicional sobre la marca..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_medicine_brand_search" model="ir.ui.view">
+        <field name="name">oh.medicine.brand.search</field>
+        <field name="model">oh.medicine.brand</field>
+        <field name="arch" type="xml">
+            <search string="Marcas de Medicinas">
+                <field name="name" string="Marca"/>
+                <field name="description" string="Descripción"/>
+                <filter string="Activas" name="active" domain="[('is_active', '=', True)]"/>
+                <separator/>
+                <filter string="Archivadas" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_medicine_brand" model="ir.actions.act_window">
+        <field name="name">Marcas de Medicinas</field>
+        <field name="res_model">oh.medicine.brand</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_medicine_brand_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva marca de medicina
+            </p>
+            <p>
+                Las marcas comerciales identifican los productos farmacéuticos
+                de diferentes laboratorios. Una misma sustancia activa puede
+                comercializarse bajo diferentes marcas.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_medicine_brand"
+              name="Marcas"
+              parent="menu_oh_medicines"
+              action="action_oh_medicine_brand"
+              sequence="25"/>
+
+</odoo>
+

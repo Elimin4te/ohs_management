@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Marcas Internacionales -->
+        <record id="oh_medicine_brand_tylenol" model="oh.medicine.brand">
+            <field name="name">Tylenol</field>
+            <field name="description">Marca comercial de McNeil Consumer Healthcare.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_advil" model="oh.medicine.brand">
+            <field name="name">Advil</field>
+            <field name="description">Marca comercial de Pfizer.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_voltaren" model="oh.medicine.brand">
+            <field name="name">Voltaren</field>
+            <field name="description">Marca comercial de Novartis.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_cataflam" model="oh.medicine.brand">
+            <field name="name">Cataflam</field>
+            <field name="description">Marca comercial de Novartis.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_profenid" model="oh.medicine.brand">
+            <field name="name">Profenid</field>
+            <field name="description">Marca comercial de Sanofi.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_amoxil" model="oh.medicine.brand">
+            <field name="name">Amoxil</field>
+            <field name="description">Marca comercial de GlaxoSmithKline.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_flagyl" model="oh.medicine.brand">
+            <field name="name">Flagyl</field>
+            <field name="description">Marca comercial de Sanofi.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_claritin" model="oh.medicine.brand">
+            <field name="name">Claritin</field>
+            <field name="description">Marca comercial de Bayer.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_benadryl" model="oh.medicine.brand">
+            <field name="name">Benadryl</field>
+            <field name="description">Marca comercial de Johnson & Johnson.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_zentel" model="oh.medicine.brand">
+            <field name="name">Zentel</field>
+            <field name="description">Marca comercial de GlaxoSmithKline.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_losec" model="oh.medicine.brand">
+            <field name="name">Losec</field>
+            <field name="description">Marca comercial de AstraZeneca.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_peridex" model="oh.medicine.brand">
+            <field name="name">Peridex</field>
+            <field name="description">Marca comercial de 3M.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_flexeril" model="oh.medicine.brand">
+            <field name="name">Flexeril</field>
+            <field name="description">Marca comercial de McNeil Pharmaceuticals.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Marcas Nacionales/Genéricas -->
+        <record id="oh_medicine_brand_genfar" model="oh.medicine.brand">
+            <field name="name">Genfar</field>
+            <field name="description">Laboratorio farmacéutico colombiano. Medicamentos genéricos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_lafrancol" model="oh.medicine.brand">
+            <field name="name">Lafrancol</field>
+            <field name="description">Laboratorio farmacéutico venezolano. Medicamentos genéricos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_dolex" model="oh.medicine.brand">
+            <field name="name">Dolex</field>
+            <field name="description">Marca comercial de analgésicos y antipiréticos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_tempra" model="oh.medicine.brand">
+            <field name="name">Tempra</field>
+            <field name="description">Marca comercial de acetaminofén.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_atamel" model="oh.medicine.brand">
+            <field name="name">Atamel</field>
+            <field name="description">Marca comercial de acetaminofén.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_brand_dolac" model="oh.medicine.brand">
+            <field name="name">Dolac</field>
+            <field name="description">Marca comercial de analgésicos y antiinflamatorios.</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

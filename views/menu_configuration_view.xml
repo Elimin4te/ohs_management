@@ -11,11 +11,17 @@
               parent="menu_oh_root"
               sequence="10"/>
 
+    <!-- Menú Medicinas -->
+    <menuitem id="menu_oh_medicines"
+              name="Medicinas"
+              parent="menu_oh_root"
+              sequence="20"/>
+
     <!-- Menú Maestros Clínicos -->
     <menuitem id="menu_oh_clinical_masters"
               name="Maestros Clínicos"
               parent="menu_oh_root"
-              sequence="20"/>
+              sequence="30"/>
 
 </odoo>
 

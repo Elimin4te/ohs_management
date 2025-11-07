@@ -5,6 +5,7 @@ access_oh_aptitude_recommendation_user,oh.aptitude.recommendation.user,model_oh_
 access_oh_rest_origin_user,oh.rest.origin.user,model_oh_rest_origin,base.group_user,1,1,1,1
 access_oh_medicine_via_user,oh.medicine.via.user,model_oh_medicine_via,base.group_user,1,1,1,1
 access_oh_medicine_therapeutic_category_user,oh.medicine.therapeutic.category.user,model_oh_medicine_therapeutic_category,base.group_user,1,1,1,1
+access_oh_medicine_brand_user,oh.medicine.brand.user,model_oh_medicine_brand,base.group_user,1,1,1,1
 access_oh_medicine_master_user,oh.medicine.master.user,model_oh_medicine_master,base.group_user,1,1,1,1
 access_oh_medicine_presentation_user,oh.medicine.presentation.user,model_oh_medicine_presentation,base.group_user,1,1,1,1
 access_oh_exam_user,oh.exam.user,model_oh_exam,base.group_user,1,1,1,1

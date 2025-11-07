@@ -8,6 +8,7 @@
             <tree string="Maestro de Medicinas">
                 <field name="name" required="1"/>
                 <field name="therapeutic_category_id"/>
+                <field name="brand_id"/>
                 <field name="is_active"/>
             </tree>
         </field>
@@ -24,6 +25,9 @@
                         <group>
                             <field name="name" required="1" placeholder="Ej: Ketoprofeno"/>
                             <field name="therapeutic_category_id" 
+                                   domain="[('is_active', '=', True)]"
+                                   options="{'no_create_edit': False}"/>
+                            <field name="brand_id" 
                                    domain="[('is_active', '=', True)]"
                                    options="{'no_create_edit': False}"/>
                         </group>
@@ -57,6 +61,7 @@
             <search string="Maestro de Medicinas">
                 <field name="name" string="Sustancia Activa"/>
                 <field name="therapeutic_category_id" string="Categoría Terapéutica"/>
+                <field name="brand_id" string="Marca"/>
                 <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
                 <separator/>
                 <filter string="Analgésicos/Antipiréticos" name="analgesico" domain="[('therapeutic_category_id.name', 'ilike', 'Analgésico')]"/>
@@ -90,9 +95,9 @@
     <!-- Elemento de Menú -->
     <menuitem id="menu_oh_medicine_master"
               name="Sustancias Activas"
-              parent="menu_oh_clinical_masters"
+              parent="menu_oh_medicines"
               action="action_oh_medicine_master"
-              sequence="41"/>
+              sequence="20"/>
 
 </odoo>
 

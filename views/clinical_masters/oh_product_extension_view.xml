@@ -57,36 +57,12 @@
         </field>
     </record>
 
-    <!-- Elemento de Menú para Medicinas -->
-    <menuitem id="menu_oh_medicines"
+    <!-- Elemento de Menú para Medicinas (Productos) -->
+    <menuitem id="menu_oh_medicines_products"
               name="Medicinas"
-              parent="menu_oh_clinical_masters"
+              parent="menu_oh_medicines"
               action="action_oh_medicines"
-              sequence="50"/>
-
-    <!-- Acción de Ventana para Presentaciones (Unidades de Medida) -->
-    <record id="action_oh_uom" model="ir.actions.act_window">
-        <field name="name">Presentaciones</field>
-        <field name="res_model">uom.uom</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                Crear una nueva presentación
-            </p>
-            <p>
-                Las presentaciones (unidades de medida) definen las formas en que
-                se pueden presentar las medicinas (tabletas, cápsulas, frascos, etc.).
-                Estas se utilizan para el control de inventario farmacéutico.
-            </p>
-        </field>
-    </record>
-
-    <!-- Elemento de Menú para Presentaciones (Unidades de Medida) -->
-    <menuitem id="menu_oh_uom"
-              name="Unidades de Medida"
-              parent="menu_oh_clinical_masters"
-              action="action_oh_uom"
-              sequence="60"/>
+              sequence="40"/>
 
 </odoo>
 

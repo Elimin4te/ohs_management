@@ -6,24 +6,28 @@
         <record id="oh_medicine_master_acetaminofen" model="oh.medicine.master">
             <field name="name">Acetaminofén</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_analgesico_antipiretico"/>
+            <field name="brand_id" ref="oh_medicine_brand_tylenol"/>
             <field name="is_active">True</field>
         </record>
 
         <record id="oh_medicine_master_ibuprofeno" model="oh.medicine.master">
             <field name="name">Ibuprofeno</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_aine"/>
+            <field name="brand_id" ref="oh_medicine_brand_advil"/>
             <field name="is_active">True</field>
         </record>
 
         <record id="oh_medicine_master_diclofenaco" model="oh.medicine.master">
             <field name="name">Diclofenaco</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_aine"/>
+            <field name="brand_id" ref="oh_medicine_brand_voltaren"/>
             <field name="is_active">True</field>
         </record>
 
         <record id="oh_medicine_master_ketoprofeno" model="oh.medicine.master">
             <field name="name">Ketoprofeno</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_aine"/>
+            <field name="brand_id" ref="oh_medicine_brand_profenid"/>
             <field name="is_active">True</field>
         </record>
 
@@ -31,12 +35,14 @@
         <record id="oh_medicine_master_amoxicilina" model="oh.medicine.master">
             <field name="name">Amoxicilina</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_antibiotico_penicilina"/>
+            <field name="brand_id" ref="oh_medicine_brand_amoxil"/>
             <field name="is_active">True</field>
         </record>
 
         <record id="oh_medicine_master_metronidazol" model="oh.medicine.master">
             <field name="name">Metronidazol</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_antibiotico_antiparasitario"/>
+            <field name="brand_id" ref="oh_medicine_brand_flagyl"/>
             <field name="is_active">True</field>
         </record>
 
@@ -44,12 +50,14 @@
         <record id="oh_medicine_master_loratadina" model="oh.medicine.master">
             <field name="name">Loratadina</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_antihistaminico"/>
+            <field name="brand_id" ref="oh_medicine_brand_claritin"/>
             <field name="is_active">True</field>
         </record>
 
         <record id="oh_medicine_master_difenhidramina" model="oh.medicine.master">
             <field name="name">Difenhidramina</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_antihistaminico"/>
+            <field name="brand_id" ref="oh_medicine_brand_benadryl"/>
             <field name="is_active">True</field>
         </record>
 
@@ -57,6 +65,7 @@
         <record id="oh_medicine_master_albendazol" model="oh.medicine.master">
             <field name="name">Albendazol</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_antihelmintico"/>
+            <field name="brand_id" ref="oh_medicine_brand_zentel"/>
             <field name="is_active">True</field>
         </record>
 
@@ -64,6 +73,7 @@
         <record id="oh_medicine_master_omeprazol" model="oh.medicine.master">
             <field name="name">Omeprazol</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_protector_gastrico"/>
+            <field name="brand_id" ref="oh_medicine_brand_losec"/>
             <field name="is_active">True</field>
         </record>
 
@@ -71,6 +81,7 @@
         <record id="oh_medicine_master_clorhexidina" model="oh.medicine.master">
             <field name="name">Clorhexidina</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_antiseptico"/>
+            <field name="brand_id" ref="oh_medicine_brand_peridex"/>
             <field name="is_active">True</field>
         </record>
 
@@ -78,6 +89,7 @@
         <record id="oh_medicine_master_ciclobenzaprina" model="oh.medicine.master">
             <field name="name">Ciclobenzaprina</field>
             <field name="therapeutic_category_id" ref="oh_therapeutic_category_relajante_muscular"/>
+            <field name="brand_id" ref="oh_medicine_brand_flexeril"/>
             <field name="is_active">True</field>
         </record>
 
