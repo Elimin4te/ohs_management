@@ -5,7 +5,7 @@
         <field name="name">oh.medicine.via.tree</field>
         <field name="model">oh.medicine.via</field>
         <field name="arch" type="xml">
-            <tree string="Vías de Administración" editable="bottom">
+            <tree string="Vías de Administración">
                 <field name="via_type" required="1"/>
                 <field name="name" required="1"/>
                 <field name="is_active"/>

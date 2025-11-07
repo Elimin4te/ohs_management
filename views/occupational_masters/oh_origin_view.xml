@@ -5,7 +5,7 @@
         <field name="name">oh.rest.origin.tree</field>
         <field name="model">oh.rest.origin</field>
         <field name="arch" type="xml">
-            <tree string="Origen/Causa de Reposo (IVSS)" editable="bottom">
+            <tree string="Origen/Causa de Reposo (IVSS)">
                 <field name="origin_type" required="1"/>
                 <field name="name" required="1"/>
                 <field name="is_active"/>

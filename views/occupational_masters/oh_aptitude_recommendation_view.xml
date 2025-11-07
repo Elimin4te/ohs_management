@@ -5,7 +5,7 @@
         <field name="name">oh.aptitude.recommendation.tree</field>
         <field name="model">oh.aptitude.recommendation</field>
         <field name="arch" type="xml">
-            <tree string="Recomendaciones de Aptitud" editable="bottom">
+            <tree string="Recomendaciones de Aptitud">
                 <field name="evaluation_type" required="1"/>
                 <field name="name" required="1"/>
                 <field name="is_active"/>

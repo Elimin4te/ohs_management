@@ -5,7 +5,7 @@
         <field name="name">oh.diagnosis.tree</field>
         <field name="model">oh.diagnosis</field>
         <field name="arch" type="xml">
-            <tree string="Diagnósticos (CIE-11)" editable="bottom">
+            <tree string="Diagnósticos (CIE-11)">
                 <field name="code" required="1"/>
                 <field name="name" required="1"/>
                 <field name="is_notifiable"/>
