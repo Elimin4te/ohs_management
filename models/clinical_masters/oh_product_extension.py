@@ -20,4 +20,14 @@ class ProductTemplate(models.Model):
         string='Vías de Administración',
         help='Vías de administración disponibles para esta medicina'
     )
+    oh_master_medicine_id = fields.Many2one(
+        'oh.medicine.master',
+        string='Sustancia Activa',
+        help='Agrupa el SKU bajo la Sustancia Activa'
+    )
+    oh_presentation_id = fields.Many2one(
+        'oh.medicine.presentation',
+        string='Presentación',
+        help='Especifica el formato físico del SKU (Ej: Ampolla)'
+    )
 

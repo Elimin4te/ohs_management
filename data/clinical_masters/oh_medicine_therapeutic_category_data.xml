@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Analgésicos y Antipiréticos -->
+        <record id="oh_therapeutic_category_analgesico_antipiretico" model="oh.medicine.therapeutic.category">
+            <field name="name">Analgésico/Antipirético</field>
+            <field name="description">Medicamentos que alivian el dolor y reducen la fiebre. No tienen efecto antiinflamatorio significativo.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Antiinflamatorios -->
+        <record id="oh_therapeutic_category_aine" model="oh.medicine.therapeutic.category">
+            <field name="name">Antiinflamatorio No Esteroideo (AINE)</field>
+            <field name="description">Medicamentos que reducen la inflamación, el dolor y la fiebre. Comúnmente usados para dolores musculares y articulares.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Antibióticos -->
+        <record id="oh_therapeutic_category_antibiotico_penicilina" model="oh.medicine.therapeutic.category">
+            <field name="name">Antibiótico (Penicilina)</field>
+            <field name="description">Antibióticos del grupo de las penicilinas. Efectivos contra infecciones bacterianas comunes.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_therapeutic_category_antibiotico_antiparasitario" model="oh.medicine.therapeutic.category">
+            <field name="name">Antibiótico/Antiparasitario</field>
+            <field name="description">Medicamentos que combaten tanto infecciones bacterianas como parásitos intestinales.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Antihistamínicos -->
+        <record id="oh_therapeutic_category_antihistaminico" model="oh.medicine.therapeutic.category">
+            <field name="name">Antihistamínico</field>
+            <field name="description">Medicamentos que bloquean la acción de la histamina, usados para tratar alergias, picazón y reacciones alérgicas.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Antihelmínticos -->
+        <record id="oh_therapeutic_category_antihelmintico" model="oh.medicine.therapeutic.category">
+            <field name="name">Antihelmíntico</field>
+            <field name="description">Medicamentos que eliminan parásitos intestinales (gusanos). Importante en ambientes con riesgo de contaminación.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Protectores Gástricos -->
+        <record id="oh_therapeutic_category_protector_gastrico" model="oh.medicine.therapeutic.category">
+            <field name="name">Protector Gástrico</field>
+            <field name="description">Medicamentos que reducen la producción de ácido gástrico. Usados para tratar úlceras y reflujo gastroesofágico.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Antisépticos -->
+        <record id="oh_therapeutic_category_antiseptico" model="oh.medicine.therapeutic.category">
+            <field name="name">Antiséptico/Desinfectante</field>
+            <field name="description">Sustancias que previenen el crecimiento de microorganismos. Usadas para desinfectar heridas y superficies.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Relajantes Musculares -->
+        <record id="oh_therapeutic_category_relajante_muscular" model="oh.medicine.therapeutic.category">
+            <field name="name">Relajante Muscular</field>
+            <field name="description">Medicamentos que relajan los músculos esqueléticos. Usados para tratar espasmos musculares y dolores relacionados.</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

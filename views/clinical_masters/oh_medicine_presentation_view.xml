@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_medicine_presentation_tree" model="ir.ui.view">
+        <field name="name">oh.medicine.presentation.tree</field>
+        <field name="model">oh.medicine.presentation</field>
+        <field name="arch" type="xml">
+            <tree string="Presentaciones de Medicinas">
+                <field name="presentation_type" required="1"/>
+                <field name="name" required="1"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_medicine_presentation_form" model="ir.ui.view">
+        <field name="name">oh.medicine.presentation.form</field>
+        <field name="model">oh.medicine.presentation</field>
+        <field name="arch" type="xml">
+            <form string="Presentación de Medicina">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="presentation_type" required="1"/>
+                            <field name="name" required="1" placeholder="Ej: Comprimido, Ampolla, Vacuna"/>
+                        </group>
+                        <group>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Ingrese el detalle del formato o su administración..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_medicine_presentation_search" model="ir.ui.view">
+        <field name="name">oh.medicine.presentation.search</field>
+        <field name="model">oh.medicine.presentation</field>
+        <field name="arch" type="xml">
+            <search string="Presentaciones de Medicinas">
+                <field name="name" string="Presentación"/>
+                <field name="description" string="Descripción"/>
+                <field name="presentation_type" string="Tipo"/>
+                <filter string="Activas" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Sólidas" name="solid" domain="[('presentation_type', '=', 'solid')]"/>
+                <filter string="Líquidas" name="liquid" domain="[('presentation_type', '=', 'liquid')]"/>
+                <filter string="Gases" name="gas" domain="[('presentation_type', '=', 'gas')]"/>
+                <filter string="Biológicas" name="biological" domain="[('presentation_type', '=', 'biological')]"/>
+                <filter string="Otras" name="other" domain="[('presentation_type', '=', 'other')]"/>
+                <separator/>
+                <filter string="Archivadas" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_medicine_presentation" model="ir.actions.act_window">
+        <field name="name">Presentaciones de Medicinas</field>
+        <field name="res_model">oh.medicine.presentation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_medicine_presentation_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva presentación
+            </p>
+            <p>
+                Las presentaciones definen los formatos físicos en que se pueden
+                presentar las medicinas (comprimidos, ampollas, vacunas, etc.).
+                Se utilizan para clasificar y gestionar los productos farmacéuticos.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_medicine_presentation"
+              name="Presentaciones de Medicinas"
+              parent="menu_oh_clinical_masters"
+              action="action_oh_medicine_presentation"
+              sequence="42"/>
+
+</odoo>
+

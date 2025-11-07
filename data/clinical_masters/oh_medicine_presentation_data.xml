@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Presentaciones Sólidas -->
+        <record id="oh_medicine_presentation_comprimido" model="oh.medicine.presentation">
+            <field name="name">Comprimido</field>
+            <field name="presentation_type">solid</field>
+            <field name="description">Forma farmacéutica sólida para administración oral. Comprimidos de diferentes dosificaciones.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_presentation_capsula" model="oh.medicine.presentation">
+            <field name="name">Cápsula</field>
+            <field name="presentation_type">solid</field>
+            <field name="description">Forma farmacéutica sólida con cubierta gelatinosa para administración oral.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_presentation_tableta" model="oh.medicine.presentation">
+            <field name="name">Tableta</field>
+            <field name="presentation_type">solid</field>
+            <field name="description">Forma farmacéutica sólida masticable o efervescente para administración oral.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Presentaciones Líquidas -->
+        <record id="oh_medicine_presentation_jarabe" model="oh.medicine.presentation">
+            <field name="name">Jarabe</field>
+            <field name="presentation_type">liquid</field>
+            <field name="description">Solución acuosa azucarada para administración oral. Ideal para pacientes con dificultad para tragar comprimidos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_presentation_suspension" model="oh.medicine.presentation">
+            <field name="name">Suspensión</field>
+            <field name="presentation_type">liquid</field>
+            <field name="description">Suspensión líquida para administración oral. Requiere agitar antes de usar.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_presentation_ampolla" model="oh.medicine.presentation">
+            <field name="name">Ampolla Inyectable</field>
+            <field name="presentation_type">liquid</field>
+            <field name="description">Solución estéril en ampolla de vidrio para administración parenteral (intramuscular o intravenosa).</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_presentation_solucion_topica" model="oh.medicine.presentation">
+            <field name="name">Solución Tópica</field>
+            <field name="presentation_type">liquid</field>
+            <field name="description">Solución líquida para aplicación externa sobre la piel. Usada para desinfección y tratamiento de heridas.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Presentaciones Tópicas -->
+        <record id="oh_medicine_presentation_unguento" model="oh.medicine.presentation">
+            <field name="name">Ungüento</field>
+            <field name="presentation_type">other</field>
+            <field name="description">Preparación semisólida de consistencia grasa para aplicación tópica sobre la piel.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_presentation_crema" model="oh.medicine.presentation">
+            <field name="name">Crema</field>
+            <field name="presentation_type">other</field>
+            <field name="description">Emulsión semisólida para aplicación tópica. Absorción más rápida que el ungüento.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_medicine_presentation_gel" model="oh.medicine.presentation">
+            <field name="name">Gel</field>
+            <field name="presentation_type">other</field>
+            <field name="description">Preparación semisólida de consistencia gelatinosa para aplicación tópica. Efecto refrescante.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Presentaciones Biológicas -->
+        <record id="oh_medicine_presentation_vacuna" model="oh.medicine.presentation">
+            <field name="name">Vacuna</field>
+            <field name="presentation_type">biological</field>
+            <field name="description">Preparación biológica para inmunización. Administración parenteral (intramuscular o subcutánea).</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <!-- Otras Presentaciones -->
+        <record id="oh_medicine_presentation_parche" model="oh.medicine.presentation">
+            <field name="name">Parche Transdérmico</field>
+            <field name="presentation_type">other</field>
+            <field name="description">Sistema de administración transdérmica mediante parche adhesivo. Liberación controlada del medicamento.</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

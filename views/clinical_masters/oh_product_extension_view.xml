@@ -11,11 +11,19 @@
                 <field name="oh_is_medicine"/>
             </field>
             
-            <!-- Añadir pestaña para Vías de Administración cuando es medicina -->
+            <!-- Añadir pestaña para datos médicos cuando es medicina -->
             <xpath expr="//notebook" position="inside">
                 <page string="Medicina" name="oh_medicine" groups="base.group_user">
                     <group>
                         <field name="oh_is_medicine" invisible="1"/>
+                        <group string="Información Médica" invisible="not oh_is_medicine">
+                            <field name="oh_master_medicine_id" 
+                                   domain="[('is_active', '=', True)]"
+                                   options="{'no_create_edit': False}"/>
+                            <field name="oh_presentation_id" 
+                                   domain="[('is_active', '=', True)]"
+                                   options="{'no_create_edit': False}"/>
+                        </group>
                         <group string="Vías de Administración" invisible="not oh_is_medicine">
                             <field name="oh_via_ids" widget="many2many_tags" 
                                    domain="[('is_active', '=', True)]"
@@ -23,7 +31,7 @@
                         </group>
                     </group>
                     <div invisible="not oh_is_medicine" class="alert alert-info" role="alert">
-                        <p>Seleccione las vías de administración disponibles para esta medicina.</p>
+                        <p>Configure la sustancia activa, presentación y vías de administración disponibles para esta medicina.</p>
                     </div>
                 </page>
             </xpath>
@@ -73,9 +81,9 @@
         </field>
     </record>
 
-    <!-- Elemento de Menú para Presentaciones -->
+    <!-- Elemento de Menú para Presentaciones (Unidades de Medida) -->
     <menuitem id="menu_oh_uom"
-              name="Presentaciones"
+              name="Unidades de Medida"
               parent="menu_oh_clinical_masters"
               action="action_oh_uom"
               sequence="60"/>

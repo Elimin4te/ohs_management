@@ -44,6 +44,9 @@
         
         # Default data - Clinical Masters
         'data/clinical_masters/oh_medicine_via_data.xml',
+        'data/clinical_masters/oh_medicine_therapeutic_category_data.xml',
+        'data/clinical_masters/oh_medicine_master_data.xml',
+        'data/clinical_masters/oh_medicine_presentation_data.xml',
         'data/clinical_masters/oh_diagnosis_data.xml',
         'data/clinical_masters/oh_specialty_data.xml',
         
@@ -58,6 +61,9 @@
         
         # Clinical Masters Views
         'views/clinical_masters/oh_medicine_via_view.xml',
+        'views/clinical_masters/oh_medicine_therapeutic_category_view.xml',
+        'views/clinical_masters/oh_medicine_master_view.xml',
+        'views/clinical_masters/oh_medicine_presentation_view.xml',
         'views/clinical_masters/oh_product_extension_view.xml',
         'views/clinical_masters/oh_exam_view.xml',
         'views/clinical_masters/oh_diagnosis_view.xml',

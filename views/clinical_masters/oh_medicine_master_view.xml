@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_medicine_master_tree" model="ir.ui.view">
+        <field name="name">oh.medicine.master.tree</field>
+        <field name="model">oh.medicine.master</field>
+        <field name="arch" type="xml">
+            <tree string="Maestro de Medicinas">
+                <field name="name" required="1"/>
+                <field name="therapeutic_category_id"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_medicine_master_form" model="ir.ui.view">
+        <field name="name">oh.medicine.master.form</field>
+        <field name="model">oh.medicine.master</field>
+        <field name="arch" type="xml">
+            <form string="Maestro de Medicina">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" placeholder="Ej: Ketoprofeno"/>
+                            <field name="therapeutic_category_id" 
+                                   domain="[('is_active', '=', True)]"
+                                   options="{'no_create_edit': False}"/>
+                        </group>
+                        <group>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Productos" name="products">
+                            <field name="product_ids" readonly="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="default_code"/>
+                                    <field name="oh_presentation_id"/>
+                                    <field name="list_price"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_medicine_master_search" model="ir.ui.view">
+        <field name="name">oh.medicine.master.search</field>
+        <field name="model">oh.medicine.master</field>
+        <field name="arch" type="xml">
+            <search string="Maestro de Medicinas">
+                <field name="name" string="Sustancia Activa"/>
+                <field name="therapeutic_category_id" string="Categoría Terapéutica"/>
+                <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
+                <separator/>
+                <filter string="Analgésicos/Antipiréticos" name="analgesico" domain="[('therapeutic_category_id.name', 'ilike', 'Analgésico')]"/>
+                <filter string="AINE" name="aine" domain="[('therapeutic_category_id.name', 'ilike', 'AINE')]"/>
+                <filter string="Antibióticos" name="antibiotico" domain="[('therapeutic_category_id.name', 'ilike', 'Antibiótico')]"/>
+                <filter string="Antihistamínicos" name="antihistaminico" domain="[('therapeutic_category_id.name', 'ilike', 'Antihistamínico')]"/>
+                <separator/>
+                <filter string="Archivados" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_medicine_master" model="ir.actions.act_window">
+        <field name="name">Sustancias Activas</field>
+        <field name="res_model">oh.medicine.master</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_medicine_master_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva sustancia activa
+            </p>
+            <p>
+                Las sustancias activas agrupan diferentes presentaciones y SKUs
+                de productos farmacéuticos bajo un mismo principio activo.
+                Esto facilita la gestión y el control de inventario de medicinas.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_medicine_master"
+              name="Sustancias Activas"
+              parent="menu_oh_clinical_masters"
+              action="action_oh_medicine_master"
+              sequence="41"/>
+
+</odoo>
+

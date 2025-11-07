@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_medicine_therapeutic_category_tree" model="ir.ui.view">
+        <field name="name">oh.medicine.therapeutic.category.tree</field>
+        <field name="model">oh.medicine.therapeutic.category</field>
+        <field name="arch" type="xml">
+            <tree string="Categorías Terapéuticas">
+                <field name="name" required="1"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_medicine_therapeutic_category_form" model="ir.ui.view">
+        <field name="name">oh.medicine.therapeutic.category.form</field>
+        <field name="model">oh.medicine.therapeutic.category</field>
+        <field name="arch" type="xml">
+            <form string="Categoría Terapéutica">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" placeholder="Ej: Analgésico/Antipirético, AINE"/>
+                        </group>
+                        <group>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Ingrese la descripción detallada de la categoría terapéutica..."/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_medicine_therapeutic_category_search" model="ir.ui.view">
+        <field name="name">oh.medicine.therapeutic.category.search</field>
+        <field name="model">oh.medicine.therapeutic.category</field>
+        <field name="arch" type="xml">
+            <search string="Categorías Terapéuticas">
+                <field name="name" string="Categoría"/>
+                <field name="description" string="Descripción"/>
+                <filter string="Activas" name="active" domain="[('is_active', '=', True)]"/>
+                <separator/>
+                <filter string="Archivadas" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_medicine_therapeutic_category" model="ir.actions.act_window">
+        <field name="name">Categorías Terapéuticas</field>
+        <field name="res_model">oh.medicine.therapeutic.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_oh_medicine_therapeutic_category_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva categoría terapéutica
+            </p>
+            <p>
+                Las categorías terapéuticas clasifican las medicinas según su
+                uso terapéutico y mecanismo de acción (analgésicos, antibióticos,
+                antiinflamatorios, etc.). Esto facilita la organización y búsqueda
+                de medicamentos.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_medicine_therapeutic_category"
+              name="Categorías Terapéuticas"
+              parent="menu_oh_clinical_masters"
+              action="action_oh_medicine_therapeutic_category"
+              sequence="15"/>
+
+</odoo>
+
