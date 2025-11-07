@@ -5,22 +5,16 @@
               name="Salud Ocupacional"
               sequence="100"/>
 
-    <!-- Menú Maestros -->
-    <menuitem id="menu_oh_masters"
-              name="Maestros"
-              parent="menu_oh_root"
-              sequence="10"/>
-
     <!-- Menú Maestros Ocupacionales -->
     <menuitem id="menu_oh_occupational_masters"
               name="Maestros Ocupacionales"
-              parent="menu_oh_masters"
+              parent="menu_oh_root"
               sequence="10"/>
 
     <!-- Menú Maestros Clínicos -->
     <menuitem id="menu_oh_clinical_masters"
               name="Maestros Clínicos"
-              parent="menu_oh_masters"
+              parent="menu_oh_root"
               sequence="20"/>
 
 </odoo>

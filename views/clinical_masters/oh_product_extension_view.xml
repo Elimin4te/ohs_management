@@ -30,5 +30,55 @@
         </field>
     </record>
 
+    <!-- Acción de Ventana para Medicinas -->
+    <record id="action_oh_medicines" model="ir.actions.act_window">
+        <field name="name">Medicinas</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('oh_is_medicine', '=', True)]</field>
+        <field name="context">{'default_oh_is_medicine': True, 'search_default_oh_is_medicine': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva medicina
+            </p>
+            <p>
+                Las medicinas son productos farmacéuticos que pueden administrarse
+                a los empleados. Configure las vías de administración disponibles
+                para cada medicina en la pestaña "Medicina" del formulario.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú para Medicinas -->
+    <menuitem id="menu_oh_medicines"
+              name="Medicinas"
+              parent="menu_oh_clinical_masters"
+              action="action_oh_medicines"
+              sequence="50"/>
+
+    <!-- Acción de Ventana para Presentaciones (Unidades de Medida) -->
+    <record id="action_oh_uom" model="ir.actions.act_window">
+        <field name="name">Presentaciones</field>
+        <field name="res_model">uom.uom</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva presentación
+            </p>
+            <p>
+                Las presentaciones (unidades de medida) definen las formas en que
+                se pueden presentar las medicinas (tabletas, cápsulas, frascos, etc.).
+                Estas se utilizan para el control de inventario farmacéutico.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú para Presentaciones -->
+    <menuitem id="menu_oh_uom"
+              name="Presentaciones"
+              parent="menu_oh_clinical_masters"
+              action="action_oh_uom"
+              sequence="60"/>
+
 </odoo>
 
