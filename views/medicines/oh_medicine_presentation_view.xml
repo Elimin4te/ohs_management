@@ -5,9 +5,9 @@
         <field name="name">oh.medicine.presentation.tree</field>
         <field name="model">oh.medicine.presentation</field>
         <field name="arch" type="xml">
-            <tree string="Presentaciones de Medicinas">
-                <field name="presentation_type" required="1"/>
+            <tree string="Presentaciones de Medicinas"> 
                 <field name="name" required="1"/>
+                <field name="presentation_type" required="1"/>
                 <field name="is_active"/>
             </tree>
         </field>

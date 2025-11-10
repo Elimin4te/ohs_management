@@ -42,14 +42,14 @@
         'data/occupational_masters/oh_aptitude_recommendation_data.xml',
         'data/occupational_masters/oh_rest_origin_data.xml',
         
+        # Default data - Medicines
+        'data/medicines/oh_medicine_via_data.xml',
+        'data/medicines/oh_medicine_therapeutic_category_data.xml',
+        'data/medicines/oh_medicine_presentation_data.xml',
+        
         # Default data - Clinical Masters
         'data/clinical_masters/oh_partner_ivss_data.xml',
         'data/clinical_masters/oh_partner_insurance_data.xml',
-        'data/clinical_masters/oh_medicine_via_data.xml',
-        'data/clinical_masters/oh_medicine_therapeutic_category_data.xml',
-        'data/clinical_masters/oh_medicine_brand_data.xml',
-        'data/clinical_masters/oh_medicine_master_data.xml',
-        'data/clinical_masters/oh_medicine_presentation_data.xml',
         'data/clinical_masters/oh_diagnosis_data.xml',
         'data/clinical_masters/oh_specialty_data.xml',
         
@@ -62,15 +62,17 @@
         'views/occupational_masters/oh_aptitude_recommendation_view.xml',
         'views/occupational_masters/oh_origin_view.xml',
         
+        # Medicines Views
+        'views/medicines/oh_product_extension_view.xml',
+        'views/medicines/oh_medicine_via_view.xml',
+        'views/medicines/oh_medicine_therapeutic_category_view.xml',
+        'views/medicines/oh_medicine_brand_view.xml',
+        'views/medicines/oh_medicine_master_view.xml',
+        'views/medicines/oh_medicine_presentation_view.xml',
+        
         # Clinical Masters Views
         'views/clinical_masters/oh_partner_ivss_view.xml',
         'views/clinical_masters/oh_partner_insurance_view.xml',
-        'views/clinical_masters/oh_medicine_via_view.xml',
-        'views/clinical_masters/oh_medicine_therapeutic_category_view.xml',
-        'views/clinical_masters/oh_medicine_brand_view.xml',
-        'views/clinical_masters/oh_medicine_presentation_view.xml',
-        'views/clinical_masters/oh_product_extension_view.xml',
-        'views/clinical_masters/oh_medicine_master_view.xml',
         'views/clinical_masters/oh_exam_view.xml',
         'views/clinical_masters/oh_diagnosis_view.xml',
         'views/clinical_masters/oh_specialty_view.xml',

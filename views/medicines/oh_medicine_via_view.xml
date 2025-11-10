@@ -6,8 +6,8 @@
         <field name="model">oh.medicine.via</field>
         <field name="arch" type="xml">
             <tree string="Vías de Administración">
-                <field name="via_type" required="1"/>
                 <field name="name" required="1"/>
+                <field name="via_type" required="1"/>
                 <field name="is_active"/>
             </tree>
         </field>
@@ -76,11 +76,7 @@
     </record>
 
     <!-- Elemento de Menú para oh.medicine.via -->
-    <menuitem id="menu_oh_medicine_via"
-              name="Vías de Administración"
-              parent="menu_oh_medicines"
-              action="action_oh_medicine_via"
-              sequence="10"/>
+    <menuitem id="menu_oh_medicine_via" name="Vías de Administración" parent="menu_oh_medicines" action="action_oh_medicine_via" sequence="10"/>
 
 </odoo>
 
