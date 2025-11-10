@@ -80,9 +80,9 @@
     <!-- Elemento de Menú -->
     <menuitem id="menu_oh_diagnosis_category"
               name="Clasificación de Diagnóstico"
-              parent="menu_oh_clinical_masters"
+              parent="menu_oh_clinical_masters_diagnostics"
               action="action_oh_diagnosis_category"
-              sequence="61"/>
+              sequence="10"/>
 
 </odoo>
 

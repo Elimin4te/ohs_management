@@ -41,5 +41,17 @@
               parent="menu_oh_clinical_masters"
               sequence="10"/>
 
+    <!-- Submenú Centros y Aseguradoras (dentro de Maestros Clínicos) -->
+    <menuitem id="menu_oh_clinical_masters_partners"
+              name="Centros y Aseguradoras"
+              parent="menu_oh_clinical_masters"
+              sequence="20"/>
+
+    <!-- Submenú Diagnósticos y Exámenes (dentro de Maestros Clínicos) -->
+    <menuitem id="menu_oh_clinical_masters_diagnostics"
+              name="Diagnósticos y Exámenes"
+              parent="menu_oh_clinical_masters"
+              sequence="30"/>
+
 </odoo>
 

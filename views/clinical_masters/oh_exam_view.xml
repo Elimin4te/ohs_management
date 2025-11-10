@@ -87,9 +87,9 @@
     <!-- Elemento de Menú -->
     <menuitem id="menu_oh_exam"
               name="Exámenes Médicos"
-              parent="menu_oh_clinical_masters"
+              parent="menu_oh_clinical_masters_diagnostics"
               action="action_oh_exam"
-              sequence="20"/>
+              sequence="30"/>
 
 </odoo>
 

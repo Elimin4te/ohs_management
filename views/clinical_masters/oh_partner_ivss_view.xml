@@ -63,9 +63,9 @@
     <!-- Elemento de Menú para Centros IVSS -->
     <menuitem id="menu_oh_partner_ivss"
               name="Centros IVSS"
-              parent="menu_oh_clinical_masters"
+              parent="menu_oh_clinical_masters_partners"
               action="action_oh_partner_ivss"
-              sequence="45"/>
+              sequence="20"/>
 
 </odoo>
 

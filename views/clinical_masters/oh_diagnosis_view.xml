@@ -87,9 +87,9 @@
     <!-- Elemento de Menú -->
     <menuitem id="menu_oh_diagnosis"
               name="Diagnósticos (CIE-11)"
-              parent="menu_oh_clinical_masters"
+              parent="menu_oh_clinical_masters_diagnostics"
               action="action_oh_diagnosis"
-              sequence="30"/>
+              sequence="20"/>
 
 </odoo>
 

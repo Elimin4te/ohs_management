@@ -63,9 +63,9 @@
     <!-- Elemento de Menú para Aseguradoras -->
     <menuitem id="menu_oh_partner_insurance"
               name="Aseguradoras"
-              parent="menu_oh_clinical_masters"
+              parent="menu_oh_clinical_masters_partners"
               action="action_oh_partner_insurance"
-              sequence="43"/>
+              sequence="10"/>
 
 </odoo>
 
