@@ -46,6 +46,8 @@
         'data/medicines/oh_medicine_via_data.xml',
         'data/medicines/oh_medicine_therapeutic_category_data.xml',
         'data/medicines/oh_medicine_presentation_data.xml',
+        'data/medicines/oh_medicine_brand_data.xml',
+        'data/medicines/oh_medicine_master_data.xml',
         
         # Default data - Clinical Masters
         'data/clinical_masters/oh_partner_ivss_data.xml',
