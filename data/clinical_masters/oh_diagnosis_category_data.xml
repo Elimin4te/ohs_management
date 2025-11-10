@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Clasificaciones de Diagnóstico según CIE-11 -->
+        <record id="oh_diagnosis_category_01" model="oh.diagnosis.category">
+            <field name="name">Ciertos trastornos infecciosos o parasitarios</field>
+            <field name="description">Enfermedades causadas por agentes infecciosos como bacterias, virus, hongos, parásitos y priones.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_02" model="oh.diagnosis.category">
+            <field name="name">Neoplasias</field>
+            <field name="description">Tumores benignos y malignos, incluyendo cánceres y lesiones precancerosas.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_03" model="oh.diagnosis.category">
+            <field name="name">Enfermedades de la sangre o de los órganos hematopoyéticos</field>
+            <field name="description">Trastornos que afectan la sangre, médula ósea, bazo y sistema linfático.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_04" model="oh.diagnosis.category">
+            <field name="name">Enfermedades del sistema inmunitario</field>
+            <field name="description">Trastornos que afectan el sistema inmunológico, incluyendo enfermedades autoinmunes e inmunodeficiencias.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_05" model="oh.diagnosis.category">
+            <field name="name">Enfermedades endocrinas, nutricionales o metabólicas</field>
+            <field name="description">Trastornos de las glándulas endocrinas, metabolismo y nutrición.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_06" model="oh.diagnosis.category">
+            <field name="name">Trastornos mentales, conductuales o del neurodesarrollo</field>
+            <field name="description">Condiciones que afectan el pensamiento, comportamiento, emociones y desarrollo neurológico.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_07" model="oh.diagnosis.category">
+            <field name="name">Enfermedades del sistema nervioso</field>
+            <field name="description">Trastornos que afectan el cerebro, médula espinal y nervios periféricos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_08" model="oh.diagnosis.category">
+            <field name="name">Enfermedades del ojo y sus anexos</field>
+            <field name="description">Trastornos que afectan los ojos, párpados, glándulas lagrimales y estructuras relacionadas.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_09" model="oh.diagnosis.category">
+            <field name="name">Enfermedades del oído</field>
+            <field name="description">Trastornos que afectan el oído externo, medio e interno, incluyendo pérdida de audición.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_10" model="oh.diagnosis.category">
+            <field name="name">Enfermedades del sistema circulatorio</field>
+            <field name="description">Trastornos que afectan el corazón, vasos sanguíneos y sistema circulatorio.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_11" model="oh.diagnosis.category">
+            <field name="name">Enfermedades del sistema respiratorio</field>
+            <field name="description">Trastornos que afectan los pulmones, vías respiratorias y pleura.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_12" model="oh.diagnosis.category">
+            <field name="name">Enfermedades del sistema digestivo</field>
+            <field name="description">Trastornos que afectan el esófago, estómago, intestinos, hígado, páncreas y órganos digestivos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_13" model="oh.diagnosis.category">
+            <field name="name">Enfermedades de la piel</field>
+            <field name="description">Trastornos que afectan la piel, cabello, uñas y glándulas cutáneas.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_14" model="oh.diagnosis.category">
+            <field name="name">Enfermedades del sistema musculoesquelético</field>
+            <field name="description">Trastornos que afectan músculos, huesos, articulaciones, tendones y ligamentos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_15" model="oh.diagnosis.category">
+            <field name="name">Enfermedades del sistema genitourinario</field>
+            <field name="description">Trastornos que afectan los riñones, uréteres, vejiga, uretra y órganos reproductivos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_16" model="oh.diagnosis.category">
+            <field name="name">Condiciones relacionadas con la salud sexual</field>
+            <field name="description">Condiciones que afectan la función sexual, reproducción y salud reproductiva.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_17" model="oh.diagnosis.category">
+            <field name="name">Embarazo, parto y puerperio</field>
+            <field name="description">Condiciones relacionadas con el embarazo, complicaciones del parto y período postparto.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_18" model="oh.diagnosis.category">
+            <field name="name">Ciertas condiciones originadas en el período perinatal</field>
+            <field name="description">Condiciones que se originan durante el período perinatal (desde el nacimiento hasta los 28 días de vida).</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_19" model="oh.diagnosis.category">
+            <field name="name">Malformaciones congénitas, deformidades o anomalías cromosómicas</field>
+            <field name="description">Anomalías estructurales o funcionales presentes desde el nacimiento y trastornos cromosómicos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_20" model="oh.diagnosis.category">
+            <field name="name">Lesiones, envenenamientos o ciertas otras consecuencias de causas externas</field>
+            <field name="description">Lesiones traumáticas, envenenamientos y otras condiciones causadas por factores externos.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_21" model="oh.diagnosis.category">
+            <field name="name">Causas externas de morbilidad o mortalidad</field>
+            <field name="description">Códigos que describen las circunstancias y causas externas de lesiones y muertes.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_22" model="oh.diagnosis.category">
+            <field name="name">Factores que influyen en el estado de salud o contacto con los servicios de salud</field>
+            <field name="description">Factores de riesgo, factores que influyen en el estado de salud y códigos para contactos con servicios de salud.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_23" model="oh.diagnosis.category">
+            <field name="name">Códigos para propósitos especiales</field>
+            <field name="description">Códigos especiales utilizados para propósitos específicos de codificación y clasificación.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_24" model="oh.diagnosis.category">
+            <field name="name">Trastornos de medicina tradicional</field>
+            <field name="description">Condiciones relacionadas con sistemas de medicina tradicional y complementaria.</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_25" model="oh.diagnosis.category">
+            <field name="name">Clasificación suplementaria de funciones</field>
+            <field name="description">Códigos para clasificar funciones corporales y estructuras según la CIF (Clasificación Internacional del Funcionamiento).</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_diagnosis_category_26" model="oh.diagnosis.category">
+            <field name="name">Clasificación suplementaria de productos medicinales</field>
+            <field name="description">Códigos para clasificar medicamentos y productos terapéuticos utilizados en el tratamiento.</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_diagnosis_category_tree" model="ir.ui.view">
+        <field name="name">oh.diagnosis.category.tree</field>
+        <field name="model">oh.diagnosis.category</field>
+        <field name="arch" type="xml">
+            <tree string="Clasificación de Diagnóstico">
+                <field name="name" required="1"/>
+                <field name="diagnosis_count" string="Nº Diagnósticos"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_diagnosis_category_form" model="ir.ui.view">
+        <field name="name">oh.diagnosis.category.form</field>
+        <field name="model">oh.diagnosis.category</field>
+        <field name="arch" type="xml">
+            <form string="Clasificación de Diagnóstico">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" placeholder="Ej: Enfermedades del Sistema Circulatorio"/>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Breve descripción de los diagnósticos que agrupa esta categoría..."/>
+                    </group>
+                    <notebook>
+                        <page string="Diagnósticos" name="diagnosis">
+                            <field name="diagnosis_ids" nolabel="1">
+                                <tree string="Diagnósticos">
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="is_notifiable"/>
+                                    <field name="is_active"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_diagnosis_category_search" model="ir.ui.view">
+        <field name="name">oh.diagnosis.category.search</field>
+        <field name="model">oh.diagnosis.category</field>
+        <field name="arch" type="xml">
+            <search string="Clasificación de Diagnóstico">
+                <field name="name" string="Categoría"/>
+                <field name="description" string="Descripción"/>
+                <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Inactivos" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_diagnosis_category" model="ir.actions.act_window">
+        <field name="name">Clasificación de Diagnóstico</field>
+        <field name="res_model">oh.diagnosis.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva clasificación de diagnóstico
+            </p>
+            <p>
+                Las clasificaciones de diagnóstico agrupan los diagnósticos según
+                los capítulos funcionales de la CIE-11 (Clasificación Internacional de Enfermedades).
+                Esto facilita la organización y reporte de diagnósticos médicos.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_diagnosis_category"
+              name="Clasificación de Diagnóstico"
+              parent="menu_oh_clinical_masters"
+              action="action_oh_diagnosis_category"
+              sequence="61"/>
+
+</odoo>
+

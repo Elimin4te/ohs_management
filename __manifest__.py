@@ -54,6 +54,7 @@
         # Default data - Clinical Masters
         'data/clinical_masters/oh_partner_ivss_data.xml',
         'data/clinical_masters/oh_partner_insurance_data.xml',
+        'data/clinical_masters/oh_diagnosis_category_data.xml',
         'data/clinical_masters/oh_diagnosis_data.xml',
         'data/clinical_masters/oh_specialty_data.xml',
         
@@ -80,6 +81,7 @@
         'views/clinical_masters/oh_partner_ivss_view.xml',
         'views/clinical_masters/oh_partner_insurance_view.xml',
         'views/clinical_masters/oh_exam_view.xml',
+        'views/clinical_masters/oh_diagnosis_category_view.xml',
         'views/clinical_masters/oh_diagnosis_view.xml',
         'views/clinical_masters/oh_specialty_view.xml',
     ],

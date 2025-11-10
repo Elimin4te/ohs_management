@@ -8,6 +8,7 @@
             <tree string="Diagnósticos (CIE-11)">
                 <field name="code" required="1"/>
                 <field name="name" required="1"/>
+                <field name="category_id"/>
                 <field name="is_notifiable"/>
                 <field name="is_active"/>
             </tree>
@@ -21,10 +22,14 @@
         <field name="arch" type="xml">
             <form string="Diagnóstico (CIE-11)">
                 <sheet>
+                    <div class="alert alert-info" role="alert" style="margin-bottom: 15px;">
+                        <strong>Importante:</strong> Los códigos de diagnóstico (CIE-11) deben seguir el estándar de la OMS para garantizar una reportería médica y epidemiológica válida.
+                    </div>
                     <group>
                         <group>
                             <field name="code" required="1" placeholder="Ej: BA00.0, 1B21.1"/>
                             <field name="name" required="1"/>
+                            <field name="category_id" options="{'no_create': False, 'no_create_edit': False}"/>
                         </group>
                         <group>
                             <field name="is_notifiable"/>
@@ -49,10 +54,14 @@
                 <field name="name" string="Diagnóstico"/>
                 <field name="code" string="Código CIE-11"/>
                 <field name="description" string="Descripción"/>
+                <field name="category_id" string="Clasificación"/>
                 <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
                 <filter string="Notificables" name="notifiable" domain="[('is_notifiable', '=', True)]"/>
                 <separator/>
                 <filter string="Archivados" name="inactive" domain="[('is_active', '=', False)]"/>
+                <group expand="0" string="Agrupar por">
+                    <filter string="Clasificación" name="group_category" context="{'group_by': 'category_id'}"/>
+                </group>
             </search>
         </field>
     </record>

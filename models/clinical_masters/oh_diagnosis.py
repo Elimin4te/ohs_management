@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields
 
 
 class OhDiagnosis(models.Model):
@@ -32,6 +32,11 @@ class OhDiagnosis(models.Model):
         string='Activo',
         default=True,
         help='Estado de disponibilidad del diagnóstico'
+    )
+    category_id = fields.Many2one(
+        'oh.diagnosis.category',
+        string='Clasificación',
+        help='Clasificación funcional del diagnóstico según CIE-11 (permite agrupar para reportes)'
     )
 
     _sql_constraints = [
