@@ -73,9 +73,9 @@
     <!-- Elemento de Menú -->
     <menuitem id="menu_oh_medicine_therapeutic_category"
               name="Categorías Terapéuticas"
-              parent="menu_oh_medicines"
+              parent="menu_oh_medicines_catalogs"
               action="action_oh_medicine_therapeutic_category"
-              sequence="15"/>
+              sequence="20"/>
 
 </odoo>
 

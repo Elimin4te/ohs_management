@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_dose_frequency_tree" model="ir.ui.view">
+        <field name="name">oh.dose.frequency.tree</field>
+        <field name="model">oh.dose.frequency</field>
+        <field name="arch" type="xml">
+            <tree string="Frecuencias de Dosis">
+                <field name="name" required="1"/>
+                <field name="factor_per_day" required="1"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_dose_frequency_form" model="ir.ui.view">
+        <field name="name">oh.dose.frequency.form</field>
+        <field name="model">oh.dose.frequency</field>
+        <field name="arch" type="xml">
+            <form string="Frecuencia de Dosis">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" placeholder="Ej: Cada 8 Horas"/>
+                            <field name="factor_per_day" required="1" placeholder="Ej: 3"/>
+                        </group>
+                        <group>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_dose_frequency_search" model="ir.ui.view">
+        <field name="name">oh.dose.frequency.search</field>
+        <field name="model">oh.dose.frequency</field>
+        <field name="arch" type="xml">
+            <search string="Frecuencias de Dosis">
+                <field name="name" string="Frecuencia"/>
+                <field name="factor_per_day" string="Dosis por Día"/>
+                <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Inactivos" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_dose_frequency" model="ir.actions.act_window">
+        <field name="name">Frecuencias de Dosis</field>
+        <field name="res_model">oh.dose.frequency</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva frecuencia de dosis
+            </p>
+            <p>
+                Las frecuencias de dosis definen con qué frecuencia se debe
+                administrar un medicamento durante el día (ej: Cada 8 horas, Tres veces al día).
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_dose_frequency"
+              name="Frecuencias de Dosis"
+              parent="menu_oh_medicines_treatments"
+              action="action_oh_dose_frequency"
+              sequence="20"/>
+
+</odoo>
+

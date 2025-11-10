@@ -48,6 +48,8 @@
         'data/medicines/oh_medicine_presentation_data.xml',
         'data/medicines/oh_medicine_brand_data.xml',
         'data/medicines/oh_medicine_master_data.xml',
+        'data/medicines/oh_dose_frequency_data.xml',
+        'data/medicines/oh_treatment_duration_data.xml',
         
         # Default data - Clinical Masters
         'data/clinical_masters/oh_partner_ivss_data.xml',
@@ -67,10 +69,12 @@
         # Medicines Views
         'views/medicines/oh_product_extension_view.xml',
         'views/medicines/oh_medicine_via_view.xml',
+        'views/medicines/oh_dose_frequency_view.xml',
+        'views/medicines/oh_treatment_duration_view.xml',
+        'views/medicines/oh_medicine_presentation_view.xml',
         'views/medicines/oh_medicine_therapeutic_category_view.xml',
         'views/medicines/oh_medicine_brand_view.xml',
         'views/medicines/oh_medicine_master_view.xml',
-        'views/medicines/oh_medicine_presentation_view.xml',
         
         # Clinical Masters Views
         'views/clinical_masters/oh_partner_ivss_view.xml',

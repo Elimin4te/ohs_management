@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Duraciones de Tratamiento -->
+        <record id="oh_treatment_duration_1_day" model="oh.treatment.duration">
+            <field name="name">1 Día</field>
+            <field name="number_of_days">1</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_treatment_duration_3_days" model="oh.treatment.duration">
+            <field name="name">3 Días</field>
+            <field name="number_of_days">3</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_treatment_duration_5_days" model="oh.treatment.duration">
+            <field name="name">5 Días</field>
+            <field name="number_of_days">5</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_treatment_duration_7_days" model="oh.treatment.duration">
+            <field name="name">7 Días</field>
+            <field name="number_of_days">7</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_treatment_duration_10_days" model="oh.treatment.duration">
+            <field name="name">10 Días</field>
+            <field name="number_of_days">10</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_treatment_duration_14_days" model="oh.treatment.duration">
+            <field name="name">14 Días</field>
+            <field name="number_of_days">14</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_treatment_duration_30_days" model="oh.treatment.duration">
+            <field name="name">30 Días</field>
+            <field name="number_of_days">30</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_treatment_duration_permanent" model="oh.treatment.duration">
+            <field name="name">Permanente</field>
+            <field name="number_of_days">0</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

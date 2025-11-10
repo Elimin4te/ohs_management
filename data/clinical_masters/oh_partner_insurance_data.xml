@@ -7,6 +7,109 @@
             <field name="name">Aseguradora</field>
         </record>
 
+        <!-- ============================================ -->
+        <!-- ASEGURADORAS -->
+        <!-- ============================================ -->
+        
+        <record id="insurance_la_occidental" model="res.partner">
+            <field name="name">C.A. de Seguros La Occidental</field>
+            <field name="is_company">True</field>
+            <field name="vat">J-070011300</field>
+            <field name="street">Esquina de la Calle 6 con Calle 9, Zona Industrial La Urbina</field>
+            <field name="city">Caracas</field>
+            <field name="zip">1073</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
+        <record id="insurance_mercantil_seguros" model="res.partner">
+            <field name="name">Mercantil Seguros</field>
+            <field name="is_company">True</field>
+            <field name="vat">J-000901805</field>
+            <field name="street">Av. Libertador con Av. Isaías LÁTIGO Chávez, Edif. Mercantil Seguros</field>
+            <field name="city">Caracas</field>
+            <field name="zip">1060</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
+        <record id="insurance_banesco_seguros" model="res.partner">
+            <field name="name">Banesco Seguros</field>
+            <field name="is_company">True</field>
+            <field name="vat">J-30083118-3</field>
+            <field name="street">Av. Principal de Las Mercedes, Torre Banesco</field>
+            <field name="city">Caracas</field>
+            <field name="zip">1060</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
+        <record id="insurance_seguros_piramide" model="res.partner">
+            <field name="name">Seguros Pirámide</field>
+            <field name="is_company">True</field>
+            <field name="vat">J-00106474-5</field>
+            <field name="street">Av. Tamanaco, Edif. Impres, Urb. El Rosal</field>
+            <field name="city">Caracas</field>
+            <field name="zip">1060</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
+        <record id="insurance_seguros_caracas" model="res.partner">
+            <field name="name">Seguros Caracas</field>
+            <field name="is_company">True</field>
+            <field name="vat">J-00038923-3</field>
+            <field name="street">Av. Francisco de Miranda, C.C. El Parque, Torre Seguros Caracas</field>
+            <field name="city">Caracas</field>
+            <field name="zip">1060</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
+        <record id="insurance_mapfre_la_seguridad" model="res.partner">
+            <field name="name">Mapfre La Seguridad</field>
+            <field name="is_company">True</field>
+            <field name="vat">J-00021410-7</field>
+            <field name="street">Calle 3-A, manzana 9, Edif. Seguros La Seguridad, La Urbina Sur</field>
+            <field name="city">Caracas</field>
+            <field name="zip">1073</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
+        <record id="insurance_seguros_universitas" model="res.partner">
+            <field name="name">Seguros Universitas</field>
+            <field name="is_company">True</field>
+            <field name="vat">J-00148811-1</field>
+            <field name="street">Av. Tamanaco, Edif. Centro Empresarial El Rosal, Piso 9-10</field>
+            <field name="city">Caracas</field>
+            <field name="zip">1060</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
+        <record id="insurance_atrio_seguros" model="res.partner">
+            <field name="name">Atrio Seguros</field>
+            <field name="is_company">True</field>
+            <field name="vat">J-00298026-5</field>
+            <field name="street">Calle con Ernesto Blohm, Torre B, Piso 4, Chuao</field>
+            <field name="city">Caracas</field>
+            <field name="zip">1060</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
+        <record id="insurance_zurich_seguros" model="res.partner">
+            <field name="name">Zúrich Seguros</field>
+            <field name="is_company">True</field>
+            <field name="vat">J-00034024-2</field>
+            <field name="street">Centro Empresarial, Zona Industrial (Ubicación de referencia)</field>
+            <field name="city">Valencia</field>
+            <field name="zip">2001</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
+        <record id="insurance_horizonte" model="res.partner">
+            <field name="name">Horizonte Compañía de Seguros</field>
+            <field name="is_company">True</field>
+            <field name="street">Av. Rómulo Gallegos, Edif. Horizonte</field>
+            <field name="city">Caracas</field>
+            <field name="zip">1071</field>
+            <field name="category_id" eval="[(4, ref('partner_category_insurance'))]"/>
+        </record>
+
     </data>
 </odoo>
 

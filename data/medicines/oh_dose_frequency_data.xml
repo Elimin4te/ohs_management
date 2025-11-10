@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Frecuencias de Dosis -->
+        <record id="oh_dose_frequency_qd" model="oh.dose.frequency">
+            <field name="name">Una vez al Día (QD)</field>
+            <field name="factor_per_day">1</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_dose_frequency_bid" model="oh.dose.frequency">
+            <field name="name">Dos Veces al Día (BID)</field>
+            <field name="factor_per_day">2</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_dose_frequency_tid" model="oh.dose.frequency">
+            <field name="name">Tres Veces al Día (TID)</field>
+            <field name="factor_per_day">3</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_dose_frequency_qid" model="oh.dose.frequency">
+            <field name="name">Cuatro Veces al Día (QID)</field>
+            <field name="factor_per_day">4</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_dose_frequency_q6h" model="oh.dose.frequency">
+            <field name="name">Cada 6 Horas</field>
+            <field name="factor_per_day">4</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_dose_frequency_q8h" model="oh.dose.frequency">
+            <field name="name">Cada 8 Horas</field>
+            <field name="factor_per_day">3</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_dose_frequency_q12h" model="oh.dose.frequency">
+            <field name="name">Cada 12 Horas</field>
+            <field name="factor_per_day">2</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_dose_frequency_single" model="oh.dose.frequency">
+            <field name="name">Dosis Única</field>
+            <field name="factor_per_day">1</field>
+            <field name="is_active">True</field>
+        </record>
+
+        <record id="oh_dose_frequency_prn" model="oh.dose.frequency">
+            <field name="name">Según Necesidad (PRN)</field>
+            <field name="factor_per_day">0</field>
+            <field name="is_active">True</field>
+        </record>
+
+    </data>
+</odoo>
+

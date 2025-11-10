@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_treatment_duration_tree" model="ir.ui.view">
+        <field name="name">oh.treatment.duration.tree</field>
+        <field name="model">oh.treatment.duration</field>
+        <field name="arch" type="xml">
+            <tree string="Duración de Tratamiento">
+                <field name="name" required="1"/>
+                <field name="number_of_days" required="1"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_treatment_duration_form" model="ir.ui.view">
+        <field name="name">oh.treatment.duration.form</field>
+        <field name="model">oh.treatment.duration</field>
+        <field name="arch" type="xml">
+            <form string="Duración de Tratamiento">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" placeholder="Ej: 7 Días"/>
+                            <field name="number_of_days" required="1" placeholder="Ej: 7"/>
+                        </group>
+                        <group>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_treatment_duration_search" model="ir.ui.view">
+        <field name="name">oh.treatment.duration.search</field>
+        <field name="model">oh.treatment.duration</field>
+        <field name="arch" type="xml">
+            <search string="Duración de Tratamiento">
+                <field name="name" string="Duración"/>
+                <field name="number_of_days" string="Días"/>
+                <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Inactivos" name="inactive" domain="[('is_active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_treatment_duration" model="ir.actions.act_window">
+        <field name="name">Duración de Tratamiento</field>
+        <field name="res_model">oh.treatment.duration</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear una nueva duración de tratamiento
+            </p>
+            <p>
+                Las duraciones de tratamiento definen el período de tiempo durante
+                el cual se debe administrar un medicamento (ej: 7 días, 14 días, permanente).
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_treatment_duration"
+              name="Duración de Tratamiento"
+              parent="menu_oh_medicines_treatments"
+              action="action_oh_treatment_duration"
+              sequence="30"/>
+
+</odoo>
+

@@ -83,7 +83,7 @@
     <!-- Elemento de Menú para Medicinas (Productos) -->
     <menuitem id="menu_oh_medicines_products"
               name="Medicinas"
-              parent="menu_oh_medicines"
+              parent="menu_oh_medicines_catalogs"
               action="action_oh_medicines"
               sequence="40"/>
 

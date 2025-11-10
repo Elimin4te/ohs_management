@@ -76,7 +76,7 @@
     </record>
 
     <!-- Elemento de Menú para oh.medicine.via -->
-    <menuitem id="menu_oh_medicine_via" name="Vías de Administración" parent="menu_oh_medicines" action="action_oh_medicine_via" sequence="10"/>
+    <menuitem id="menu_oh_medicine_via" name="Vías de Administración" parent="menu_oh_medicines_treatments" action="action_oh_medicine_via" sequence="10"/>
 
 </odoo>
 

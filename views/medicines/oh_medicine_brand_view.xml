@@ -72,9 +72,9 @@
     <!-- Elemento de Menú -->
     <menuitem id="menu_oh_medicine_brand"
               name="Marcas de Medicinas"
-              parent="menu_oh_medicines"
+              parent="menu_oh_medicines_catalogs"
               action="action_oh_medicine_brand"
-              sequence="25"/>
+              sequence="30"/>
 
 </odoo>
 

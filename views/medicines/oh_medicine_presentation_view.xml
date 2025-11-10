@@ -80,9 +80,9 @@
     <!-- Elemento de Menú -->
     <menuitem id="menu_oh_medicine_presentation"
               name="Presentaciones de Medicinas"
-              parent="menu_oh_medicines"
+              parent="menu_oh_medicines_treatments"
               action="action_oh_medicine_presentation"
-              sequence="30"/>
+              sequence="40"/>
 
 </odoo>
 

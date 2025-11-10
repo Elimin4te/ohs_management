@@ -17,6 +17,18 @@
               parent="menu_oh_root"
               sequence="20"/>
 
+    <!-- Submenú Tratamientos (dentro de Medicinas) -->
+    <menuitem id="menu_oh_medicines_treatments"
+              name="Tratamientos"
+              parent="menu_oh_medicines"
+              sequence="10"/>
+
+    <!-- Submenú Catálogos de Medicinas (dentro de Medicinas) -->
+    <menuitem id="menu_oh_medicines_catalogs"
+              name="Catálogos de Medicinas"
+              parent="menu_oh_medicines"
+              sequence="20"/>
+
     <!-- Menú Maestros Clínicos -->
     <menuitem id="menu_oh_clinical_masters"
               name="Maestros Clínicos"

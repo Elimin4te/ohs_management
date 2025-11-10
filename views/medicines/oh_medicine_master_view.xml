@@ -91,9 +91,9 @@
     <!-- Elemento de Menú -->
     <menuitem id="menu_oh_medicine_master"
               name="Sustancias Activas"
-              parent="menu_oh_medicines"
+              parent="menu_oh_medicines_catalogs"
               action="action_oh_medicine_master"
-              sequence="20"/>
+              sequence="10"/>
 
 </odoo>
 
