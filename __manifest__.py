@@ -84,6 +84,7 @@
         'views/clinical_masters/oh_diagnosis_category_view.xml',
         'views/clinical_masters/oh_diagnosis_view.xml',
         'views/clinical_masters/oh_specialty_view.xml',
+        'views/clinical_masters/oh_medical_specialist_view.xml',
     ],
     'installable': True,
     'application': True,

@@ -76,9 +76,9 @@
     <!-- Elemento de Menú -->
     <menuitem id="menu_oh_specialty"
               name="Especialidades Médicas"
-              parent="menu_oh_clinical_masters"
+              parent="menu_oh_clinical_masters_specialists"
               action="action_oh_specialty"
-              sequence="80"/>
+              sequence="10"/>
 
 </odoo>
 

@@ -12,6 +12,8 @@ access_oh_exam_user,oh.exam.user,model_oh_exam,base.group_user,1,1,1,1
 access_oh_diagnosis_user,oh.diagnosis.user,model_oh_diagnosis,base.group_user,1,1,1,1
 access_oh_diagnosis_category_user,oh.diagnosis.category.user,model_oh_diagnosis_category,base.group_user,1,1,1,1
 access_oh_specialty_user,oh.specialty.user,model_oh_specialty,base.group_user,1,1,1,1
+access_oh_medical_specialist_user,oh.medical.specialist.user,model_oh_medical_specialist,base.group_user,1,1,1,1
+access_oh_medical_specialist_line_user,oh.medical.specialist.line.user,model_oh_medical_specialist_line,base.group_user,1,1,1,1
 access_oh_dose_frequency_user,oh.dose.frequency.user,model_oh_dose_frequency,base.group_user,1,1,1,1
 access_oh_treatment_duration_user,oh.treatment.duration.user,model_oh_treatment_duration,base.group_user,1,1,1,1
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_oh_medical_specialist_tree" model="ir.ui.view">
+        <field name="name">oh.medical.specialist.tree</field>
+        <field name="model">oh.medical.specialist</field>
+        <field name="arch" type="xml">
+            <tree string="Especialistas Médicos">
+                <field name="user_id" required="1"/>
+                <field name="principal_specialty_id" string="Especialidad Principal"/>
+                <field name="principal_reg" string="Registro Principal"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_oh_medical_specialist_form" model="ir.ui.view">
+        <field name="name">oh.medical.specialist.form</field>
+        <field name="model">oh.medical.specialist</field>
+        <field name="arch" type="xml">
+            <form string="Especialista Médico">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="user_id" required="1" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="is_active"/>
+                        </group>
+                        <group>
+                            <field name="principal_specialty_id" string="Especialidad Principal" readonly="1"/>
+                            <field name="principal_reg" string="Registro Principal" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Especialidades" name="specialties">
+                            <field name="specialty_ids" nolabel="1">
+                                <tree string="Especialidades" editable="bottom">
+                                    <field name="specialty_id" required="1"/>
+                                    <field name="professional_reg" required="1" placeholder="Ej: CM-12345"/>
+                                    <field name="is_principal"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_oh_medical_specialist_search" model="ir.ui.view">
+        <field name="name">oh.medical.specialist.search</field>
+        <field name="model">oh.medical.specialist</field>
+        <field name="arch" type="xml">
+            <search string="Especialistas Médicos">
+                <field name="user_id" string="Usuario"/>
+                <field name="principal_specialty_id" string="Especialidad Principal"/>
+                <field name="principal_reg" string="Registro Principal"/>
+                <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
+                <filter string="Inactivos" name="inactive" domain="[('is_active', '=', False)]"/>
+                <separator/>
+                <filter string="Salud Ocupacional" name="occupational" domain="[('principal_specialty_id.is_occupational', '=', True)]"/>
+                <group expand="0" string="Agrupar por">
+                    <filter string="Especialidad Principal" name="group_specialty" context="{'group_by': 'principal_specialty_id'}"/>
+                    <filter string="Usuario" name="group_user" context="{'group_by': 'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_oh_medical_specialist" model="ir.actions.act_window">
+        <field name="name">Especialistas Médicos</field>
+        <field name="res_model">oh.medical.specialist</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear un nuevo especialista médico
+            </p>
+            <p>
+                Los especialistas médicos son profesionales de la salud (empleados directos o terceros)
+                que están vinculados a su cuenta de usuario en Odoo. Esto permite la autenticación,
+                acceso al sistema y firma de documentos digitales.
+            </p>
+            <p>
+                Cada especialista puede tener múltiples especialidades médicas registradas, cada una
+                con su propio número de registro profesional o colegiatura único. Una de las especialidades
+                debe marcarse como principal para identificación rápida.
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_oh_medical_specialist"
+              name="Especialistas Médicos"
+              parent="menu_oh_clinical_masters_specialists"
+              action="action_oh_medical_specialist"
+              sequence="20"/>
+
+</odoo>
+

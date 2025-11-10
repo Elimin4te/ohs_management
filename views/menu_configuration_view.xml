@@ -35,5 +35,11 @@
               parent="menu_oh_root"
               sequence="30"/>
 
+    <!-- Submenú Especialistas (dentro de Maestros Clínicos) -->
+    <menuitem id="menu_oh_clinical_masters_specialists"
+              name="Especialistas"
+              parent="menu_oh_clinical_masters"
+              sequence="10"/>
+
 </odoo>
 
