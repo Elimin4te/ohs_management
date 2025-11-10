@@ -59,8 +59,6 @@
                 <field name="principal_reg" string="Registro Principal"/>
                 <filter string="Activos" name="active" domain="[('is_active', '=', True)]"/>
                 <filter string="Inactivos" name="inactive" domain="[('is_active', '=', False)]"/>
-                <separator/>
-                <filter string="Salud Ocupacional" name="occupational" domain="[('principal_specialty_id.is_occupational', '=', True)]"/>
                 <group expand="0" string="Agrupar por">
                     <filter string="Especialidad Principal" name="group_specialty" context="{'group_by': 'principal_specialty_id'}"/>
                     <filter string="Usuario" name="group_user" context="{'group_by': 'user_id'}"/>
